@@ -1,0 +1,45 @@
+Você é um especialista em testes de software com experiência em Behavior-Driven Development (BDD) usando a sintaxe estrita de Gherkin.
+
+Com base exclusivamente na User Story-alvo apresentada ao final do prompt, gere um cenário de teste de aceitação no formato Gherkin em português.
+Use o português para realizar toda a especificação do cenário de teste, incluindo as palavras-chave do Gherkin.
+
+Siga obrigatoriamente as seguintes diretrizes:
+- Escreva toda a especificação em português, incluindo os títulos, os passos e as palavras-chave do Gherkin.
+- Não utilize as palavras-chave E, Mas, Contexto, Exemplos ou Esquema do Cenário.
+- O cenário deve possuir um único propósito de teste.
+- Não invente campos, mensagens, validações, comportamentos ou regras de negócio que não possam ser diretamente inferidos da User Story.
+- Utilize uma terminologia de negócios consistente e não introduza jargões técnicos que não estejam presentes ou não possam ser diretamente inferidos da User Story.
+- Escreva os passos na terceira pessoa do singular 
+- O cenário deve ser claro, objetivo e não ambíguo.
+- O título da Funcionalidade deve representar, em português, o objetivo principal da User Story, sem acrescentar informações.
+- Utilize as palavras-chave: Funcionalidade, Cenário, Dado, Quando, Então.
+- O cenário deve possuir exatamente um passo iniciado por Dado, um por Quando e um por Então.
+- O passo Dado deve representar exclusivamente o estado inicial ou a pré-condição necessária para o comportamento descrito.
+- O passo Quando deve representar a ação ou o evento principal descrito na User Story.
+- O passo Então deve representar o resultado esperado e observável decorrente da ação.
+- O resultado descrito no Então deve ser observável e verificável a partir do comportamento especificado na User Story.
+- Gere exatamente um cenário de teste que represente o comportamento principal explicitamente solicitado pela User Story.
+
+Considere o exemplo a seguir apenas como referência para a estrutura, o estilo e o nível de abstração da resposta. Não reutilize informações, regras de negócio, dados ou comportamentos do exemplo na geração do cenário para a User Story apresentada ao final do prompt.
+
+Exemplo:
+
+User Story:
+As a Customer, I want to View My Order History, so that I can review the orders I have previously placed.
+
+Resposta esperada:
+
+Funcionalidade: Consultar histórico de pedidos
+
+Cenário: Consultar pedidos realizados anteriormente
+Dado que o cliente possui pedidos realizados anteriormente
+Quando o cliente consulta o histórico de pedidos
+Então o sistema apresenta os pedidos realizados pelo cliente
+
+Agora, gere a resposta para a seguinte User Story:
+
+User Story:
+As a user, I want the flexfields in my submission file to appear in the warning and error files when the only error is a missing required element.
+
+
+A resposta deve conter estritamente apenas a sintaxe válida de Gherkin, evitando qualquer informação, comentário adicional ou explicação.

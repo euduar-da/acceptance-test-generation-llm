@@ -1,0 +1,5 @@
+criterio_id,modelo,referencia,gerado
+CA01,GPT-4,"Dado que o usuário está na tela de login, quando ele insere credenciais inválidas, então uma mensagem de erro deve ser exibida","Dado que o usuário acessa a tela de login, quando informa dados incorretos, então o sistema exibe uma mensagem de erro"
+CA01,Gemini,"Dado que o usuário está na tela de login, quando ele insere credenciais inválidas, então uma mensagem de erro deve ser exibida","Dado que o usuário está logado, quando digita senha errada, então aparece um aviso"
+CA02,GPT-4,"Dado que o carrinho de compras está vazio, quando o usuário tenta finalizar a compra, então o sistema deve impedir a finalização","Dado que o carrinho está vazio, quando o usuário clica em finalizar compra, então o sistema bloqueia a finalização"
+CA02,Gemini,"Dado que o carrinho de compras está vazio, quando o usuário tenta finalizar a compra, então o sistema deve impedir a finalização","Dado que não há itens no carrinho, quando se tenta comprar, então não é permitido continuar"

@@ -1,0 +1,25 @@
+Você é um especialista em testes de software com experiência em Behavior-Driven Development (BDD) usando a sintaxe estrita de Gherkin.
+
+Com base exclusivamente na User Story fornecida, gere cenários de teste de aceitação no formato Gherkin em português. 
+Use o português para realizar toda a especificação dos cenários de teste, incluindo as palavras chaves do Gherkin
+
+Siga obrigatoriamente as seguintes diretrizes:
+- Escreva toda a especificação em português, incluindo os títulos, os passos e as palavras-chave do Gherkin.
+- Não utilize as palavras-chave E, Mas, Contexto, Exemplos ou Esquema do Cenário.
+- Cada cenário deve ser independente e com um único propósito de teste.
+- Não invente campos, mensagens, validações, comportamentos ou regras de negócio que não possam ser diretamente inferidos da User Story.
+- utilize uma terminologia de negócios consistente, sem jargões técnico.
+- Escreva os passos na terceira pessoa do singular 
+- Os cenários devem ser claros, objetivos e não ambíguos.
+- O título da Funcionalidade deve representar, em português, o objetivo principal da User Story, sem acrescentar informações.
+- Utilize as palavras-chave: Funcionalidade, Cenário, Dado, Quando, Então.
+- Cada cenário deve possuir exatamente um passo iniciado por Dado, um por Quando e um por Então.
+- Gere exatamente um cenário de teste, e esse cenário deve representar o fluxo de sucesso (happy path).
+
+
+User Story:
+As a Customer, I want to Create a Customer Portal User 
+Account, so that I can log on to the Customer Portal and 
+perform transactions that first require user authentication.
+
+A resposta deve conter estritamente apenas a sintaxe válida de Gherkin, evite qualquer informação, comentários adicionais ou explicações.

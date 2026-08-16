@@ -1,0 +1,53 @@
+Perfil do profissional 
+
+Qual é o seu nível de experiência na área de testes de software?
+Menos de 1 ano / 1 a 3 anos / 3 a 5 anos / Mais de 5 anos
+
+Qual é o seu cargo atual?
+QA / Analista de testes / Desenvolvedor / Tech Lead / Outro
+
+Você já utilizou ou utiliza ferramentas de IA no seu trabalho?
+Sim, regularmente / Sim, ocasionalmente / Não, mas conheço / Não conheço
+
+Você já utilizou ou utiliza LLMs para geração de testes?
+Sim / Não / Estou começando a explorar
+
+Você tem familiaridade com BDD (Behavior-Driven Development) e com a linguagem Gherkin (formato Dado/Quando/Então)?
+Sim, uso regularmente / Sim, já utilizei em projetos / Conheço, mas nunca utilizei / Não conheço
+
+Avaliação dos cenários gerados (user story + cenário gerado)
+
+O cenário de teste de aceitação em Gherkin gerado está relevante para a user story fornecida?
+1 (Totalmente irrelevante) a 5 (Totalmente relevante)
+
+O cenário gerado está claro e fácil de compreender?
+1 a 5
+
+O cenário gerado está completo, cobrindo as condições necessárias?
+1 a 5
+
+O cenário gerado possui um único propósito de teste?
+1 a 5
+
+Você utilizaria esse cenário no seu projeto?
+Sim, sem modificações / Com pequenas modificações / Com grandes modificações / Não utilizaria
+
+
+Percepção sobre impactos 
+
+Em geral, você considera o uso de IA para geração de cenários de teste de aceitação em Gherkin benéfico?
+Escala: 1 (Totalmente negativo) a 5 (Totalmente positivo)
+
+Quais pontos positivos você identifica no uso de IA para essa finalidade?
+redução de esforço / maior cobertura / padronização / velocidade / outro)
+
+Quais pontos negativos ou limitações você identifica?
+erros de sintaxe / falta de contexto / dependência excessiva / inconsistência / outro)
+
+Você acredita que o uso frequente de IA para geração de testes pode impactar o pensamento crítico do profissional?
+Sim, negativamente / Sim, mas de forma positiva / Não impacta / Não sei dizer
+
+Você se sente confortável em validar cenários gerados por IA sem revisão cuidadosa?
+Sim / Às vezes / Não
+
+Você tem alguma observação adicional sobre o uso de IA na geração de cenários de teste de aceitação? (campo aberto)

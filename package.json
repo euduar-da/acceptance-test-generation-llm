@@ -1,0 +1,24 @@
+{
+  "name": "acceptance-test-generation-llm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euduar-da/acceptance-test-generation-llm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/euduar-da/acceptance-test-generation-llm/issues"
+  },
+  "homepage": "https://github.com/euduar-da/acceptance-test-generation-llm#readme",
+  "devDependencies": {
+    "gherkin-lint": "^4.2.4"
+  }
+}

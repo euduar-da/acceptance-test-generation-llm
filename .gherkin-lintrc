@@ -1,0 +1,30 @@
+{
+  "keywords-in-logical-order": "on",
+
+  "only-one-when": "on",
+
+  "scenario-size": [
+    "on",
+    {
+      "steps-length": {
+        "Scenario": 3
+      }
+    }
+  ],
+
+  "max-scenarios-per-file": [
+    "on",
+    {
+      "maxScenarios": 1,
+      "countOutlineExamples": true
+    }
+  ],
+
+  "no-unnamed-features": "on",
+
+  "no-unnamed-scenarios": "on",
+
+  "no-empty-file": "on",
+
+  "no-files-without-scenarios": "on"
+}

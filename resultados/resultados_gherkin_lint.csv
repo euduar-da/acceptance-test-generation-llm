@@ -1,0 +1,4 @@
+﻿criterio_id,modelo,arquivo,aprovado,codigo_saida,regras_violadas,mensagem_lint
+CAC01,gpt,cenarios\gpt\CAC01.feature,False,1,no-multiline-steps,"C:\Users\mdasi\Documents\acceptance-test-generation-llm\cenarios\gpt\CAC01.feature
+  8    Steps should begin with ""Given"", ""When"", ""Then"", ""And"" or ""But"". Multiline steps are dissallowed    no-multiline-steps"
+CAC02,gpt,cenarios\gpt\CAC02.feature,True,0,,

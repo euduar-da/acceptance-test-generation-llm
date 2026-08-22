@@ -1,0 +1,57 @@
+g02-federalspending
+
+As a Website user, I want to access published FABS files, so that I can see the new files as they come in.
+As a website user, I want to see updated financial assistance data daily.
+As a user, I want the publish button in FABS to deactivate after I click it while the derivations are happening, so that I cannot click it multiple times for the same submission.
+As an agency user, I want the FABS validation rules to accept zero and blank for loan records.
+As an Agency user, I want the header information box to show updated date AND time, so that I know when it was updated.
+As an Agency user, I want to receive a more helpful file-level error when I upload a file with the wrong extension.
+As an Agency user, I want to accurately see who created a submission, so that I'm not confused about who last updated a submission.
+As an agency user, I want a landing page to navigate to either FABS or DABS pages, so that I can access both sides of the site.
+As an agency user, I want to know when the submission periods start and end, so that I know when the submission starts and ends.
+As a user, I want more information about how many rows will be published prior to deciding whether to publish.
+As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.
+
+g14-datahub
+
+As a Publisher, I want to sign up for an account, so that that I can publish my data package to the registry and to have a publisher account to publish my data package under.
+As a Publisher, I want to import my data package into the registry, so that my data has a permanent online home to access. 
+As a Publisher, I want to unpublish a data package, so that it is no longer visible to anyone.
+As a Publisher, I want to create a data package in the UI so that it is available and published.
+As a Publisher, I want to undelete the deleted data packages, so that that the deleted data packages is now visible again.
+As a Consumer, I want to search data packages, so that that I can find the ones I want.
+As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.
+As an Owner, I want to edit my profile, so that that it is updated with new information.
+As an Owner, I want to invite an existing user, so that the user can become a member of my publisher.
+As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.
+As an owner, I want to make a user an owner, so that they have full control.
+As an owner, I want to remove a user as an owner, so that they are just a member and no longer have full control.
+(22 cenários até aqui)
+
+g03-loudoun
+As a Staff member, I want to Apply a Hold, so that I can prevent progression through the workflow or other actions in the system until the issue is resolved.
+As a Staff member, I want to Remove a Hold, so that I can allow progression through the workflow or other actions in the system now that the issue has been resolved.
+As an Applicant, I want to Check the Status of a transaction, so that I can understand where the provisioning of my service is in the process, such as information related to service levels, fees, plan review, permit, or inspection results.
+As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.
+As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.
+As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.
+As a Staff member, I need to be notified when Geospatial attributes change, so that I can ensure that I am reviewing the permit/application to the most current data and appropriate standards.
+As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.
+As a Plan Review Staff Member, I want to Review the Code Modifications submitted by the Applicant, so that I can review the request and if approved, associate it with the appropriate project.
+As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met
+
+
+g18-neurohub
+As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.
+As a researcher, I want to attach currently non-attached files to a log book page.
+As a researcher, I want to receive an alert of any unattached files that are in my workspace.
+As a researcher, I want to download files attached to an experiment using my Web browser.
+As a user, I want to upload large files of over 1GB in size.
+As a user, I want to assign tags to files that I have uploaded.
+As a user, I want to filter the files I get from search results based on their  type.
+As a user, I want to have files I might accidentally delete to be restorable.
+As a user, I want to search specifically for files rather than log book pages.
+As a user, I want to download files directly from the search results page.
+As a user, I want to attach multiple files at once to a log book page.
+As a user, I want to download multiple files from the search results in one go.
+As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.

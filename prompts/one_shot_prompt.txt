@@ -5,7 +5,7 @@ Use o português para realizar toda a especificação do cenário de teste, incl
 
 Siga obrigatoriamente as seguintes diretrizes:
 - Escreva toda a especificação em português, incluindo os títulos, os passos e as palavras-chave do Gherkin.
-- Não utilize as palavras-chave E, Mas, Contexto, Exemplos ou Esquema do Cenário.
+- Não utilize as palavras-chave Mas, Contexto, Exemplos ou Esquema do Cenário.
 - O cenário deve possuir um único propósito de teste.
 - Não invente campos, mensagens, validações, comportamentos ou regras de negócio que não possam ser diretamente inferidos da User Story.
 - Utilize uma terminologia de negócios consistente e não introduza jargões técnicos que não estejam presentes ou não possam ser diretamente inferidos da User Story.

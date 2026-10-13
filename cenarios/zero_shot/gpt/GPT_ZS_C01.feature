@@ -1,3 +1,5 @@
+# language: pt
+
 Funcionalidade: Acessar arquivos FABS publicados
 
 Cenário: Visualizar novos arquivos FABS publicados

@@ -1,3 +1,5 @@
+### UTILIZAÇÃO DA INTELIGÊNCIA ARTIFICIAL NA GERAÇÃO DE CENÁRIOS DE TESTE DE ACEITAÇÃO
+
 ### Este repositório reúne o desenvolvimento do trabalho de conclusão de curso que investiga o uso de Modelos de Linguagem de Grande Escala (LLMs) na geração automática de cenários de teste de aceitação em Gherkin (BDD), a partir de User Stories.
 
 ### Metodologia: 

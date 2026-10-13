@@ -1,95 +1,82 @@
 """
 Cálculo da Acurácia de Validação dos arquivos Gherkin.
 
-A métrica verifica se o conteúdo de cada arquivo .feature
-é aceito sintaticamente pelo parser oficial do Gherkin.
+A métrica utiliza os resultados previamente obtidos
+pelo Gherkin Lint.
 
 Acurácia de Validação =
-    arquivos válidos / total de arquivos
+    arquivos aprovados pelo Gherkin Lint
+    ------------------------------------
+    total de arquivos .feature avaliados
 """
 
-from gherkin import Parser
+import csv
+from pathlib import Path
 
 
-def preparar_gherkin_portugues(
-    conteudo: str
-) -> str:
+BASE_DIR = Path(__file__).resolve().parent
+
+ARQUIVO_RESULTADOS_LINT = (
+    BASE_DIR
+    / "resultados"
+    / "resultados_gherkin_lint.csv"
+)
+
+
+def converter_booleano(valor):
     """
-    Garante que o parser utilize o dialeto português.
-
-    O cabeçalho # language: pt é adicionado somente
-    quando não estiver presente.
-    """
-
-    conteudo = str(
-        conteudo
-    ).strip()
-
-    if not conteudo.startswith(
-        "# language:"
-    ):
-        conteudo = (
-            "# language: pt\n"
-            + conteudo
-        )
-
-    return conteudo
-
-
-def validar_sintaxe_gherkin(
-    conteudo: str
-):
-    """
-    Valida um arquivo Gherkin utilizando
-    o parser oficial do Cucumber.
-
-    Retorna:
-        valido: bool
-        erro: str | None
+    Converte o valor True/False armazenado
+    no CSV para booleano do Python.
     """
 
-    conteudo = preparar_gherkin_portugues(
-        conteudo
+    return (
+        str(valor)
+        .strip()
+        .lower()
+        == "true"
     )
 
-    try:
 
-        Parser().parse(
-            conteudo
-        )
-
-        return (
-            True,
-            None
-        )
-
-    except Exception as erro:
-
-        return (
-            False,
-            str(erro)
-        )
-
-
-def calcular_acuracia_validacao(
-    conteudos: list[str]
-):
+def calcular_acuracia_validacao():
     """
-    Calcula:
+    Calcula a Acurácia de Validação com base
+    nos resultados do Gherkin Lint.
 
-        arquivos sintaticamente válidos
-        --------------------------------
-        total de arquivos avaliados
+    Acurácia de Validação =
+        número de arquivos aprovados pelo Gherkin Lint
+        ------------------------------------------------
+        número total de arquivos .feature avaliados
 
     Retorna:
         acuracia,
-        quantidade_validos,
-        quantidade_invalidos,
+        quantidade_aprovados,
+        quantidade_reprovados,
         total
     """
 
+    if not ARQUIVO_RESULTADOS_LINT.exists():
+        raise FileNotFoundError(
+            "Arquivo de resultados do Gherkin Lint "
+            f"não encontrado: {ARQUIVO_RESULTADOS_LINT}"
+        )
+
+    with open(
+        ARQUIVO_RESULTADOS_LINT,
+        "r",
+        encoding="utf-8-sig",
+        newline=""
+    ) as arquivo:
+
+        leitor = csv.DictReader(
+            arquivo
+        )
+
+        resultados = list(
+            leitor
+        )
+
     total = len(
-        conteudos
+        resultados
     )
 
     if total == 0:
@@ -100,32 +87,72 @@ def calcular_acuracia_validacao(
             0
         )
 
-    quantidade_validos = 0
-
-    for conteudo in conteudos:
-
-        valido, _ = (
-            validar_sintaxe_gherkin(
-                conteudo
-            )
+    quantidade_aprovados = sum(
+        1
+        for resultado in resultados
+        if converter_booleano(
+            resultado[
+                "gherkin_lint_aprovado"
+            ]
         )
+    )
 
-        if valido:
-            quantidade_validos += 1
-
-    quantidade_invalidos = (
+    quantidade_reprovados = (
         total
-        - quantidade_validos
+        - quantidade_aprovados
     )
 
     acuracia = (
-        quantidade_validos
+        quantidade_aprovados
         / total
     )
 
     return (
         acuracia,
-        quantidade_validos,
-        quantidade_invalidos,
+        quantidade_aprovados,
+        quantidade_reprovados,
         total
     )
+
+
+def main():
+
+    (
+        acuracia,
+        aprovados,
+        reprovados,
+        total
+    ) = calcular_acuracia_validacao()
+
+    print(
+        "\n--- Acurácia de Validação ---"
+    )
+
+    print(
+        f"Total de arquivos avaliados: "
+        f"{total}"
+    )
+
+    print(
+        f"Arquivos aprovados pelo "
+        f"Gherkin Lint: {aprovados}"
+    )
+
+    print(
+        f"Arquivos reprovados pelo "
+        f"Gherkin Lint: {reprovados}"
+    )
+
+    print(
+        f"Acurácia: "
+        f"{acuracia:.4f}"
+    )
+
+    print(
+        f"Acurácia (%): "
+        f"{acuracia * 100:.2f}%"
+    )
+
+
+if __name__ == "__main__":
+    main()

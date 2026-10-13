@@ -54,4 +54,3 @@ As a user, I want to search specifically for files rather than log book pages.
 As a user, I want to download files directly from the search results page.
 As a user, I want to attach multiple files at once to a log book page.
 As a user, I want to download multiple files from the search results in one go.
-As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.

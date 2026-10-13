@@ -4,8 +4,7 @@
 Cenário: Visualizar arquivos FABS publicados
 Dado que o usuário acessa o sistema
 Quando acessar a seção de arquivos FABS publicados
-Então deve visualizar os arquivos FABS já publicados
-E deve visualizar novos arquivos à medida que eles forem publicados
+Então deve visualizar os arquivos FABS já publicados e deve visualizar novos arquivos à medida que eles forem publicados
 
 # As a website user, I want to see updated financial assistance data daily.
 Cenário: Visualizar dados de assistência financeira atualizados diariamente
@@ -17,8 +16,7 @@ Então deve visualizar os dados atualizados diariamente
 Cenário: Desativar botão de publicar arquivos FABS durante o processamento
 Dado que o usuário acessa o sistema
 Quando clicar no botão de publicar arquivos FABS
-Então o botão de publicar deve ser desativado enquanto o processamento ocorre
-E não deve ser permitido realizar múltiplos cliques no mesmo envio
+Então o botão de publicar deve ser desativado enquanto o processamento ocorre enão deve ser permitido realizar múltiplos cliques no mesmo envio
 
 # As an agency user, I want the FABS validation rules to accept zero and blank for loan records.
 Cenário: Aceitar valores zero e em branco para registros de empréstimos
@@ -58,10 +56,15 @@ Então o sistema deve exibir as datas de início e término do período de submi
 
 # As a user, I want more information about how many rows will be published prior to deciding whether to publish.
 Cenário: Exibir informações sobre o número de linhas a serem publicadas
-Dado que o usuário acessa o sistema
-E está na página de submissão
+Dado que o usuário acessa o sistema e está na página de submissão
 Quando visualizar as informações de submissão
 Então o sistema deve exibir claramente o número de linhas que serão publicadas
+
+# As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.
+Cenário: Exibir informações adicionais no painel de submissão
+Dado que o usuário FABS acessa o painel de submissão
+Quando visualizar o painel de submissão
+Então o sistema deve exibir informações adicionais para melhor gerenciar submissões e solicitações de IG
 
 @g14-datahub
 
@@ -280,9 +283,3 @@ Dado que o usuário possui múltiplos arquivos nos resultados da pesquisa
 Quando realizar o download dos arquivos
 Então o sistema deve permitir baixar os múltiplos arquivos de uma só vez
 
-# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.
-Cenário: Definir o compartilhamento de uma entrada do livro de registros
-Dado que o usuário possui uma entrada no livro de registros
-Quando definir as opções de compartilhamento da entrada
-Então deve poder mantê-la privada
-E deve poder compartilhá-la com indivíduos em vez de grupos

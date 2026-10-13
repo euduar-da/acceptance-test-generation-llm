@@ -3,6 +3,10 @@
 
   "only-one-when": "on",
 
+  "only-one-then": "on",
+
+  "only-one-given": "on",
+
   "scenario-size": [
     "on",
     {

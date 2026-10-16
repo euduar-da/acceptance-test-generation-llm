@@ -70,22 +70,19 @@ Então o sistema deve exibir informações adicionais para melhor gerenciar subm
 
 # As a Publisher, I want to sign up for an account, so that that I can publish my data package to the registry and to have a publisher account to publish my data package under.
 Cenário: Realizar cadastro de conta de editor
-Dado que o usuário acessa o sistema
-E o usuário deseja possuir uma conta de editor
+Dado que o usuário acessa o sistema e deseja possuir uma conta de editor
 Quando realizar o cadastro
 Então deve possuir uma conta de editor para publicar seus pacotes de dados
 
 # As a Publisher, I want to import my data package into the registry, so that my data has a permanent online home to access. 
 Cenário: Importar pacote de dados para o registro
-Dado que o editor acessa o sistema
-E que possui pacotes de dados para importação
+Dado que o editor acessa o sistema e possui pacotes de dados para importação
 Quando importar um pacote de dados para o registro
 Então o pacote de dados deve permanecer disponível online para acesso futuro
 
 # As a Publisher, I want to unpublish a data package, so that it is no longer visible to anyone.
 Cenário: Despublicar pacotes de dados
-Dado que o editor acessa o sistema
-E que possui pacotes de dados publicados
+Dado que o editor acessa o sistema e possui pacotes de dados publicados
 Quando despublicar um pacote de dados
 Então o pacote de dados não deve mais ser visível para os demais usuários
 
@@ -97,8 +94,7 @@ Então o pacote de dados deve ficar disponível e publicado
 
 # As a Publisher, I want to undelete the deleted data packages, so that that the deleted data packages is now visible again.
 Cenário: Restaurar pacotes de dados excluídos
-Dado que o editor acessa o sistema
-E que possui pacotes de dados excluídos
+Dado que o editor acessa o sistema e possui pacotes de dados excluídos
 Quando restaurar um pacote de dados excluído
 Então o pacote de dados deve se tornar visível novamente para os demais usuários
 
@@ -169,8 +165,7 @@ Então deve visualizar a etapa do processo em que se encontra o provisionamento 
 Cenário: Criar conta de usuário do Portal do Cliente
 Dado que o usuário acessa o Portal do cliente
 Quando realizar o cadastro
-Então deve poder realizar login 
-E deve poder acessar transações que necessitam de autenticação
+Então deve poder realizar login e acessar transações que necessitam de autenticação
 
 # As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.
 Cenário: Realizar envio de solicitação
@@ -200,8 +195,7 @@ Então a inspeção deve ser criada e estar disponível para agendamento e atrib
 Cenário: Revisar modificações de código submetidas pelo solicitante
 Dado que o membro da equipe de análise de projetos acessa uma solicitação com modificações de código submetidas pelo solicitante
 Quando revisar as modificações de código
-Então deve poder revisar a solicitação
-E se aprovada, deve poder associá-la ao projeto apropriado
+Então deve poder revisar a solicitação e se aprovada, deve poder associá-la ao projeto apropriado
 
 # As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met
 Cenário: Gerenciar carga de trabalho dos analistas de projetos

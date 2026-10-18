@@ -1,5 +1,6 @@
 import unicodedata
 import nltk
+import pandas as pd
 
 from nltk.corpus import wordnet as wn
 from nltk.stem import SnowballStemmer
@@ -519,3 +520,51 @@ def validar_integracao_omw():
         )
 
     return True
+
+
+if __name__ == "__main__":
+
+    arquivo_entrada = "metricas/csv_entrada/gemini_zero-shot.csv"
+
+    arquivo_saida = "metricas/resultados/gemini_zero-shot_meteor.csv"
+
+    df = pd.read_csv(arquivo_entrada)
+
+    referencias = df["referencia"].fillna("").tolist()
+    gerados = df["gerado"].fillna("").tolist()
+
+    scores = []
+
+    for referencia, gerado in zip(referencias, gerados):
+        score, detalhes = calcular_meteor(
+            referencia,
+            gerado
+        )
+        scores.append(score)
+
+    # Organizar resultados
+    df["meteor_score"] = scores
+
+    df["cenario"] = df["arquivo_gerado"].str.replace(
+        ".feature", "", regex=False
+    )
+
+    resultado = df[
+        [
+            "cenario",
+            "arquivo_referencia",
+            "modelo",
+            "prompt",
+            "meteor_score"
+        ]
+    ]
+
+    resultado.to_csv(
+        arquivo_saida,
+        index=False,
+        encoding="utf-8-sig",
+        float_format="%.6f"
+    )
+
+    print(f"METEOR médio: {sum(scores)/len(scores):.4f}")
+    print(f"Resultados salvos em: {arquivo_saida}")

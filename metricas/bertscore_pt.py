@@ -1,4 +1,5 @@
 from bert_score import BERTScorer
+import pandas as pd
 
 
 MODEL_TYPE = (
@@ -47,3 +48,48 @@ def calcular_bertscore(
         f1.tolist(),
         scorer.hash,
     )
+
+df = pd.read_csv(
+    "metricas/csv_entrada/chatgpt_few-shot.csv"
+)
+
+referencias = df["referencia"].tolist()
+gerados = df["gerado"].tolist()
+
+precision, recall, f1, model_hash = calcular_bertscore(
+    referencias,
+    gerados
+)
+
+df["bertscore_precision"] = precision
+df["bertscore_recall"] = recall
+df["bertscore_f1"] = f1
+
+df["cenario"] = (
+    df["arquivo_gerado"]
+    .str.replace(".feature", "", regex=False)
+)
+
+resultado = df[
+    [
+        "cenario",
+        "arquivo_referencia",
+        "modelo",
+        "prompt",
+        "bertscore_precision",
+        "bertscore_recall",
+        "bertscore_f1",
+    ]
+]
+
+resultado.to_csv(
+    "metricas/resultados/chatgpt_few-shot_bertscore.csv",
+    index=False,
+    encoding="utf-8-sig",
+    float_format="%.6f"
+)
+
+print(f"Precision média: {sum(precision) / len(precision):.4f}")
+print(f"Recall médio: {sum(recall) / len(recall):.4f}")
+print(f"F1 médio: {sum(f1) / len(f1):.4f}")
+print(f"Configuração BERTScore: {model_hash}")

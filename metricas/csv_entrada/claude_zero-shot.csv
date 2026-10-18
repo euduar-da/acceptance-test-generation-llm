@@ -1,0 +1,498 @@
+﻿"cenario","modelo","prompt","arquivo_referencia","arquivo_gerado","referencia","gerado"
+"C01","claude","zero-shot","REF_C01.feature","CLAU_ZS_C01.feature","Funcionalidade: Acessar arquivos publicados
+
+Cenário: Visualizar arquivos FABS publicados
+Dado que o usuário acessa o sistema
+Quando acessar a seção de arquivos FABS publicados
+Então deve visualizar os arquivos FABS já publicados e deve visualizar novos arquivos à medida que eles forem publicados","Funcionalidade: Acesso aos arquivos FABS publicados
+
+Cenário: Usuário visualiza novos arquivos FABS publicados
+Dado que o usuário está no site
+Quando ele acessa os arquivos FABS publicados
+Então ele visualiza os novos arquivos FABS conforme são publicados"
+"C02","claude","zero-shot","REF_C02.feature","CLAU_ZS_C02.feature","Funcionalidade: Visualizar dados de assistência financeira atualizados
+
+Cenário: Visualizar dados de assistência financeira atualizados diariamente
+Dado que o usuário acessa o sistema
+Quando acessar os dados de assistência financeira
+Então deve visualizar os dados atualizados diariamente","Funcionalidade: Visualização diária de dados atualizados de assistência financeira
+
+Cenário: Usuário visualiza dados de assistência financeira atualizados diariamente
+Dado que o usuário do site acessa a página de dados de assistência financeira
+Quando os dados de assistência financeira são atualizados diariamente
+Então o usuário do site visualiza os dados de assistência financeira atualizados"
+"C03","claude","zero-shot","REF_C03.feature","CLAU_ZS_C03.feature","Funcionalidade: Controlar publicação de arquivos FABS durante o processamento
+
+Cenário: Desativar botão de publicar arquivos FABS durante o processamento
+Dado que o usuário acessa o sistema
+Quando clicar no botão de publicar arquivos FABS
+Então o botão de publicar deve ser desativado enquanto o processamento ocorre enão deve ser permitido realizar múltiplos cliques no mesmo envio","Funcionalidade: Desativação do botão de publicação durante o processamento de derivações no FABS
+
+Cenário: Botão de publicação é desativado após o clique durante o processamento de derivações
+Dado que o usuário está na tela de submissão do FABS com o botão de publicação ativado
+Quando o usuário clica no botão de publicação e as derivações começam a ser processadas
+Então o botão de publicação é desativado"
+"C04","claude","zero-shot","REF_C04.feature","CLAU_ZS_C04.feature","Funcionalidade: Validar registros de empréstimos  
+
+Cenário: Aceitar valores zero e em branco para registros de empréstimos
+Dado que o usuário da agência acessa o sistema
+Quando enviar registros de empréstimos com valores zero ou em branco
+Então o sistema deve aceitar esses registros sem erros de validação","Funcionalidade: Aceitação de valores zero e em branco nas regras de validação FABS para registros de empréstimo
+
+Cenário: Registro de empréstimo com valor zero ou em branco é aceito pela validação
+Dado que o usuário da agência possui um registro de empréstimo com valor zero ou em branco
+Quando o registro de empréstimo é submetido às regras de validação FABS
+Então o registro de empréstimo é aceito sem erro de validação"
+"C05","claude","zero-shot","REF_C05.feature","CLAU_ZS_C05.feature","Funcionalidade: Validar data e hora de atualização 
+
+Cenário: Mostrar data e hora de atualização na caixa de informações do cabeçalho
+Dado que o usuário da agência acessa o sistema
+Quando visualizar a caixa de informações do cabeçalho
+Então o sistema deve exibir a data e hora de atualização corretamente","Funcionalidade: Exibição de data e hora de atualização na caixa de informações do cabeçalho
+
+Cenário: Usuário da agência visualiza data e hora de atualização no cabeçalho
+Dado que o usuário da agência está visualizando a caixa de informações do cabeçalho
+Quando a informação do cabeçalho é atualizada
+Então a caixa de informações do cabeçalho exibe a data e a hora da atualização"
+"C06","claude","zero-shot","REF_C06.feature","CLAU_ZS_C06.feature","Funcionalidade: Validar extensão de arquivo durante o upload
+
+Cenário: Exibir mensagem de erro ao enviar um arquivo com extensão incorreta
+Dado que o usuário da agência acessa o sistema
+Quando realizar o upload de um arquivo com extensão incorreta
+Então o sistema deve exibir uma mensagem de erro relacionada à extensão do arquivo","Funcionalidade: Exibição de mensagem de erro detalhada ao enviar arquivo com extensão inválida
+
+Cenário: Usuário da Agência recebe mensagem de erro detalhada ao enviar arquivo com extensão não suportada
+Dado que o usuário da Agência está na tela de envio de arquivo
+Quando ele envia um arquivo com uma extensão não suportada
+Então o sistema exibe uma mensagem de erro detalhada informando o problema no arquivo"
+"C07","claude","zero-shot","REF_C07.feature","CLAU_ZS_C07.feature","Funcionalidade: Exibir informações do criador da submissão
+
+Cenário: Exibir informações precisas sobre o criador da submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar uma submissão
+Então o sistema deve exibir corretamente o nome do usuário que criou a submissão","Funcionalidade: Visualização do criador da submissão
+
+Cenário: Usuário da agência visualiza o criador de uma submissão
+Dado que uma submissão possui um usuário registrado como criador
+Quando o usuário da agência visualiza a submissão
+Então o sistema exibe corretamente o usuário que criou a submissão"
+"C08","claude","zero-shot","REF_C08.feature","CLAU_ZS_C08.feature","Funcionalidade: Navegar entre FABS e DABS
+
+Cenário: Navegar para páginas FABS ou DABS a partir da página inicial
+Dado que o usuário da agência acessa a página inicial
+Quando realizar a navegação para FABS ou DABS
+Então o sistema deve redirecionar o usuário para a página da área correspondente","Funcionalidade: Navegação a partir da página inicial para as páginas FABS ou DABS
+
+Cenário: Usuário da agência acessa a página FABS ou DABS a partir da página inicial
+Dado que o usuário da agência está na página inicial
+Quando ele seleciona a opção para acessar a página FABS ou DABS
+Então o sistema exibe a página correspondente selecionada"
+"C09","claude","zero-shot","REF_C09.feature","CLAU_ZS_C09.feature","Funcionalidade: Consultar período de submissão
+
+Cenário: Exibir informações sobre o período de submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar as informações de submissão
+Então o sistema deve exibir as datas de início e término do período de submissão","Funcionalidade: Consulta das datas de início e término do período de submissão
+
+Cenário: Usuário da agência visualiza as datas de início e término do período de submissão
+Dado que o usuário da agência esteja na página do período de submissão
+Quando o usuário da agência consulta o período de submissão
+Então o sistema exibe a data de início e a data de término do período de submissão"
+"C10","claude","zero-shot","REF_C10.feature","CLAU_ZS_C10.feature","Funcionalidade: Consultar número de linhas a serem publicadas
+
+Cenário: Exibir informações sobre o número de linhas a serem publicadas
+Dado que o usuário acessa o sistema e está na página de submissão
+Quando visualizar as informações de submissão
+Então o sistema deve exibir claramente o número de linhas que serão publicadas","Funcionalidade: Exibição da quantidade de linhas a serem publicadas
+
+Cenário: Usuário visualiza a quantidade de linhas antes de publicar
+Dado que o usuário está prestes a decidir se publica os dados
+Quando o usuário visualiza as informações de publicação
+Então o sistema exibe a quantidade de linhas que serão publicadas"
+"C11","claude","zero-shot","REF_C11.feature","CLAU_ZS_C11.feature","Funcionalidade: Consultar informações do painel de submissão
+
+Cenário: Exibir informações adicionais no painel de submissão
+Dado que o usuário FABS acessa o painel de submissão
+Quando visualizar o painel de submissão
+Então o sistema deve exibir informações adicionais para melhor gerenciar submissões e solicitações de IG","Funcionalidade: Exibição de informações adicionais no painel de submissões
+
+Cenário: Usuário visualiza informações adicionais úteis no painel de submissões
+Dado que o usuário FABS acessa o painel de submissões
+Quando o painel de submissões é exibido
+Então o usuário visualiza informações adicionais úteis para gerenciar submissões e solicitações de IG"
+"C12","claude","zero-shot","REF_C12.feature","CLAU_ZS_C12.feature","Funcionalidade: Cadastrar conta de editor
+
+Cenário: Realizar cadastro de conta de editor
+Dado que o usuário acessa o sistema e deseja possuir uma conta de editor
+Quando realizar o cadastro
+Então deve possuir uma conta de editor para publicar seus pacotes de dados","Funcionalidade: Cadastro de conta de publicador
+
+Cenário: Publicador realiza o cadastro de uma nova conta com sucesso
+Dado que o publicador ainda não possui uma conta na plataforma
+Quando ele realiza o cadastro de uma nova conta
+Então uma conta de publicador é criada com sucesso"
+"C13","claude","zero-shot","REF_C13.feature","CLAU_ZS_C13.feature","Funcionalidade: Importar pacote de dados
+
+Cenário: Importar pacote de dados para o registro
+Dado que o editor acessa o sistema e possui pacotes de dados para importação
+Quando importar um pacote de dados para o registro
+Então o pacote de dados deve permanecer disponível online para acesso futuro","Funcionalidade: Importação de pacote de dados para o registro
+
+Cenário: Publicador importa pacote de dados com sucesso para o registro
+Dado que o publicador possui um pacote de dados para importar
+Quando ele importa o pacote de dados para o registro
+Então o pacote de dados passa a ter um local permanente online no registro"
+"C14","claude","zero-shot","REF_C14.feature","CLAU_ZS_C14.feature","Funcionalidade: Despublicar pacote de dados
+
+Cenário: Despublicar pacotes de dados
+Dado que o editor acessa o sistema e possui pacotes de dados publicados
+Quando despublicar um pacote de dados
+Então o pacote de dados não deve mais ser visível para os demais usuários","Funcionalidade: Despublicação de pacote de dados
+
+Cenário: Publicador despublica um pacote de dados publicado
+Dado que o pacote de dados está publicado
+Quando o publicador despublica o pacote de dados
+Então o pacote de dados deixa de ficar visível para qualquer pessoa"
+"C15","claude","zero-shot","REF_C15.feature","CLAU_ZS_C15.feature","Funcionalidade: Criar pacote de dados
+
+Cenário: Criar pacote de dados pela interface
+Dado que o editor acessa o sistema
+Quando criar um pacote de dados pela interface
+Então o pacote de dados deve ficar disponível e publicado","Funcionalidade: Criação de pacote de dados pelo Publicador
+
+Cenário: Publicador cria um pacote de dados através da interface
+Dado que o Publicador está na interface de criação de pacote de dados
+Quando ele cria o pacote de dados
+Então o pacote de dados torna-se disponível e publicado"
+"C16","claude","zero-shot","REF_C16.feature","CLAU_ZS_C16.feature","Funcionalidade: Restaurar pacote de dados excluído
+
+Cenário: Restaurar pacotes de dados excluídos
+Dado que o editor acessa o sistema e possui pacotes de dados excluídos
+Quando restaurar um pacote de dados excluído
+Então o pacote de dados deve se tornar visível novamente para os demais usuários","Funcionalidade: Restauração de pacotes de dados excluídos
+
+Cenário: Publicador restaura um pacote de dados excluído
+Dado que o publicador possui um pacote de dados excluído
+Quando o publicador restaura o pacote de dados excluído
+Então o pacote de dados torna-se visível novamente"
+"C17","claude","zero-shot","REF_C17.feature","CLAU_ZS_C17.feature","Funcionalidade: Pesquisar pacotes de dados
+
+Cenário: Pesquisar pacotes de dados
+Dado que o usuário acessa o sistema  
+Quando realizar uma pesquisa por pacotes de dados
+Então o sistema deve exibir os pacotes de dados correspondentes aos critérios da pesquisa","Funcionalidade: Busca de pacotes de dados
+
+Cenário: Consumidor busca por pacotes de dados
+Dado que o consumidor está na área de busca de pacotes de dados
+Quando ele realiza a busca por pacotes de dados
+Então o sistema exibe os pacotes de dados encontrados"
+"C18","claude","zero-shot","REF_C18.feature","CLAU_ZS_C18.feature","Funcionalidade: Baixar pacote de dados em arquivo único
+
+Cenário: Baixar pacote de dados em um único arquivo
+Dado que o usuário possui um pacote de dados disponível
+Quando realizar o download de um pacote de dados
+Então o sistema deve fornecer o pacote de dados completo em um único arquivo para download","Funcionalidade: Download do pacote de dados em um único arquivo
+
+Cenário: Consumidor baixa o pacote de dados em um único arquivo
+Dado que o consumidor possui um pacote de dados disponível com descritor e recursos
+Quando o consumidor solicita o download do pacote de dados
+Então o consumidor recebe um único arquivo contendo o descritor e todos os recursos do pacote de dados"
+"C19","claude","zero-shot","REF_C19.feature","CLAU_ZS_C19.feature","Funcionalidade: Editar perfil do proprietário
+
+Cenário: Editar perfil do proprietário
+Dado que o proprietário acessa o sistema
+Quando realizar alterações em seu perfil
+Então o sistema deve atualizar as informações do perfil com os novos dados fornecidos","Funcionalidade: Edição de perfil do proprietário
+
+Cenário: Proprietário edita seu perfil com novas informações
+Dado que o proprietário está em seu perfil
+Quando ele edita as informações do perfil
+Então o perfil é atualizado com as novas informações"
+"C20","claude","zero-shot","REF_C20.feature","CLAU_ZS_C20.feature","Funcionalidade: Adicionar usuário como membro de uma editora
+
+Cenário: Convidar usuário existente para se tornar membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando convidar um usuário existente para se tornar membro de sua editora
+Então o usuário deve poder se tornar membro da editora","Funcionalidade: Convite de usuário existente para publicador
+
+Cenário: Proprietário convida um usuário existente para se tornar membro do publicador
+Dado que o proprietário possui um usuário existente para convidar
+Quando o proprietário convida o usuário existente para o publicador
+Então o usuário se torna membro do publicador"
+"C21","claude","zero-shot","REF_C21.feature","CLAU_ZS_C21.feature","Funcionalidade: Remover membro de uma editora
+
+Cenário: Remover membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando remover um membro de sua editora
+Então o membro não deve mais ter a capacidade de publicar ou modificar os pacotes de dados da editora","Funcionalidade: Remoção de membro de publicador
+
+Cenário: Proprietário remove um membro do publicador
+Dado que o proprietário possui um membro em seu publicador
+Quando o proprietário remove esse membro do publicador
+Então o membro removido não deve mais ter a capacidade de publicar ou modificar os pacotes de dados do publicador"
+"C22","claude","zero-shot","REF_C22.feature","CLAU_ZS_C22.feature","Funcionalidade: Conceder propriedade de uma editora
+
+Cenário: Tornar um usuário proprietário
+Dado que o proprietário acessa o sistema
+Quando tornar um usuário proprietário
+Então o usuário deve ter controle total sobre a editora e seus pacotes de dados","Funcionalidade: Promoção de usuário a proprietário
+
+Cenário: Proprietário promove um usuário a proprietário
+Dado que o proprietário possui um usuário sob sua gestão
+Quando o proprietário torna esse usuário um proprietário
+Então o usuário passa a ter controle total"
+"C23","claude","zero-shot","REF_C23.feature","CLAU_ZS_C23.feature","Funcionalidade: Remover usuário como proprietário
+
+Cenário: Remover um usuário como proprietário
+Dado que o proprietário acessa o sistema
+Quando remover um usuário como proprietário
+Então o usuário deve se tornar apenas um membro e não ter mais controle total sobre a editora e seus pacotes de dados","Funcionalidade: Remoção de usuário como proprietário
+
+Cenário: Proprietário remove outro usuário do papel de proprietário
+Dado que o usuário possui o papel de proprietário
+Quando o proprietário remove esse usuário do papel de proprietário
+Então o usuário passa a ter apenas o papel de membro"
+"C24","claude","zero-shot","REF_C24.feature","CLAU_ZS_C24.feature","Funcionalidade: Aplicar restrição no sistema
+
+Cenário: Aplicar uma restrição 
+Dado que um membro da equipe acessa o sistema
+Quando aplicar uma restrição
+Então o sistema deve impedir a progressão através do workflow ou outras ações no sistema até que o problema seja resolvido","Funcionalidade: Aplicar retenção para impedir a progressão no fluxo de trabalho
+
+Cenário: Membro da equipe aplica uma retenção para impedir ações no sistema
+Dado que o membro da equipe está visualizando um item com uma questão não resolvida
+Quando ele aplica uma retenção sobre esse item
+Então a progressão pelo fluxo de trabalho e outras ações sobre o item ficam impedidas até que a questão seja resolvida"
+"C25","claude","zero-shot","REF_C25.feature","CLAU_ZS_C25.feature","Funcionalidade: Remover restrição no sistema
+
+Cenário: Remover uma restrição
+Dado que um membro da equipe acessa o sistema
+Quando remover uma restrição
+Então o sistema deve permitir a progressão através do workflow ou outras ações no sistema agora que o problema foi resolvido","Funcionalidade: Remoção de retenção para permitir a progressão no fluxo de trabalho
+
+Cenário: Membro da equipe remove uma retenção existente
+Dado que exista uma retenção ativa sobre o item
+Quando o membro da equipe remove a retenção
+Então o item fica disponível para progressão no fluxo de trabalho"
+"C26","claude","zero-shot","REF_C26.feature","CLAU_ZS_C26.feature","Funcionalidade: Consultar status de transações
+
+Cenário: Consultar status de uma transação 
+Dado que um solicitante acessa o sistema
+Quando verificar o status da transação
+Então deve visualizar a etapa do processo em que se encontra o provisionamento do serviço","Funcionalidade: Consulta do status de uma transação
+
+Cenário: Solicitante consulta o status de uma transação
+Dado que o solicitante possui uma transação em andamento
+Quando ele consulta o status dessa transação
+Então o sistema exibe as informações do processo de provisionamento do serviço"
+"C27","claude","zero-shot","REF_C27.feature","CLAU_ZS_C27.feature","Funcionalidade: Criar conta no Portal do Cliente
+
+Cenário: Criar conta de usuário do Portal do Cliente
+Dado que o usuário acessa o Portal do cliente
+Quando realizar o cadastro
+Então deve poder realizar login 
+E deve poder acessar transações que necessitam de autenticação","Funcionalidade: Criação de conta de usuário do Portal do Cliente
+
+Cenário: Cliente cria uma conta de usuário no Portal do Cliente
+Dado que o cliente não possui uma conta de usuário no Portal do Cliente
+Quando o cliente cria uma conta de usuário no Portal do Cliente
+Então o cliente passa a possuir uma conta de usuário no Portal do Cliente"
+"C28","claude","zero-shot","REF_C28.feature","CLAU_ZS_C28.feature","Funcionalidade: Enviar solicitação
+
+Cenário: Realizar envio de solicitação
+Dado que o solicitante acessa o sistema
+Quando enviar uma solicitação com suas informações, planos e/ou documentos
+Então a solicitação deve ser enviada para iniciar uma transação com o Condado","Funcionalidade: Submissão de Aplicação
+
+Cenário: Solicitante submete a aplicação com sucesso
+Dado que o solicitante possui suas informações, planos e/ou documentos prontos para envio
+Quando o solicitante submete a aplicação
+Então a transação com o Condado é iniciada"
+"C29","claude","zero-shot","REF_C29.feature","CLAU_ZS_C29.feature","Funcionalidade: Enviar documentação de suporte
+
+Cenário: Enviar documentação de suporte
+Dado que o solicitante possui uma solicitação
+Quando enviar a documentação de suporte da solicitação
+Então a documentação deve ser enviada para atender aos requisitos documentais da solicitação","Funcionalidade: Submissão de Documentação Comprobatória
+
+Cenário: Candidato submete documentação comprobatória para satisfazer os requisitos da aplicação
+Dado que o candidato possui uma aplicação com requisitos de documentação pendentes
+Quando o candidato submete a documentação comprobatória
+Então a documentação comprobatória é registrada como satisfeita para a aplicação"
+"C30","claude","zero-shot","REF_C30.feature","CLAU_ZS_C30.feature","Funcionalidade: Receber notificação de alteração de atributos geoespaciais
+
+Cenário: Notificar alteração de atributos geoespaciais
+Dado que o membro da equipe está revisando uma solicitação ou permissão
+Quando os atributos geoespaciais forem alterados
+Então o membro da equipe deve ser notificado sobre a alteração","Funcionalidade: Notificação de alteração de atributos geoespaciais
+
+Cenário: Membro da equipe é notificado após alteração de atributos geoespaciais
+Dado que o membro da equipe está revisando uma permissão ou aplicação
+Quando os atributos geoespaciais associados a essa permissão ou aplicação são alterados
+Então o membro da equipe é notificado sobre a alteração dos atributos geoespaciais"
+"C31","claude","zero-shot","REF_C31.feature","CLAU_ZS_C31.feature","Funcionalidade: Criar inspeção
+
+Cenário: Criar uma inspeção
+Dado que o membro da equipe de inspeção acessa o sistema
+Quando criar uma inspeção
+Então a inspeção deve ser criada e estar disponível para agendamento e atribuição","Funcionalidade: Criação de inspeção
+
+Cenário: Membro da equipe de inspeção cria uma inspeção com sucesso
+Dado que o membro da equipe de inspeção acessa a funcionalidade de criação de inspeção
+Quando ele cria a inspeção
+Então a inspeção é criada com sucesso"
+"C32","claude","zero-shot","REF_C32.feature","CLAU_ZS_C32.feature","Funcionalidade: Revisar modificações de código
+
+Cenário: Revisar modificações de código submetidas pelo solicitante
+Dado que o membro da equipe de análise de projetos acessa uma solicitação com modificações de código submetidas pelo solicitante
+Quando revisar as modificações de código
+Então deve poder revisar a solicitação
+E se aprovada, deve poder associá-la ao projeto apropriado","Funcionalidade: Revisão das Modificações de Código submetidas pelo Solicitante
+
+Cenário: Aprovar modificações de código associando-as ao projeto apropriado
+Dado que o Membro da Equipe de Revisão de Plano possui modificações de código submetidas pelo Solicitante para revisão
+Quando o Membro da Equipe de Revisão de Plano aprova as modificações de código
+Então as modificações de código são associadas ao projeto apropriado"
+"C33","claude","zero-shot","REF_C33.feature","CLAU_ZS_C33.feature","Funcionalidade: Gerenciar carga de trabalho dos analistas de projetos
+
+Cenário: Gerenciar carga de trabalho dos analistas de projetos
+Dado que o supervisor da equipe de análise de projetos acessa o sistema
+Quando gerenciar a carga de trabalho dos analistas de projetos
+Então deve poder monitorar e ajustar a carga de trabalho conforme necessário para garantir os níveis de serviço","Funcionalidade: Gerenciar a carga de trabalho dos revisores de plano
+
+Cenário: Supervisor ajusta a carga de trabalho de um revisor de plano
+Dado que o supervisor de equipe de revisão de planos está visualizando a carga de trabalho dos revisores de plano
+Quando ele ajusta a carga de trabalho de um revisor de plano
+Então a carga de trabalho ajustada do revisor de plano é exibida atualizada"
+"C34","claude","zero-shot","REF_C34.feature","CLAU_ZS_C34.feature","Funcionalidade: Realizar upload prévio de arquivos
+
+Cenário: Fazer upload de arquivos para anexá-los a uma página
+Dado que o pesquisador acessa o sistema pela interface web
+Quando realizar o upload de arquivos
+Então os arquivos devem ficar disponíveis para serem anexados posteriormente a uma página do livro de registros","Funcionalidade: Upload de arquivos previamente ao anexo em página de caderno de registro
+
+Cenário: Pesquisador realiza upload de arquivo pela interface web
+Dado que o pesquisador está na interface web de upload de arquivos
+Quando ele realiza o upload de um arquivo
+Então o arquivo fica disponível para ser anexado a uma página do caderno de registro"
+"C35","claude","zero-shot","REF_C35.feature","CLAU_ZS_C35.feature","Funcionalidade: Anexar arquivos a uma página do livro de registros
+
+Cenário: Anexar arquivos não associados a uma página
+Dado que o pesquisador possui arquivos que não estão anexados a uma página do livro de registros
+Quando anexar os arquivos a uma página do livro de registros
+Então os arquivos devem ficar anexados à página do livro de registros","Funcionalidade: Anexar arquivos não anexados a uma página do caderno de registro
+
+Cenário: Pesquisador anexa um arquivo não anexado a uma página do caderno de registro
+Dado que o pesquisador possui um arquivo não anexado
+Quando o pesquisador anexa esse arquivo a uma página do caderno de registro
+Então o arquivo passa a estar anexado à página do caderno de registro"
+"C36","claude","zero-shot","REF_C36.feature","CLAU_ZS_C36.feature","Funcionalidade: Receber alerta sobre arquivos não anexados
+
+Cenário: Alertar sobre arquivos não anexados
+Dado que o pesquisador possui arquivos em seu espaço de trabalho
+Quando houverem arquivos não estão anexados no espaço de trabalho
+Então o pesquisador deve receber um alerta sobre os arquivos não anexados","Funcionalidade: Alerta de arquivos não anexados no workspace
+
+Cenário: Pesquisador recebe alerta ao existir arquivo não anexado no workspace
+Dado que o pesquisador possui um arquivo não anexado em seu workspace
+Quando o sistema verifica os arquivos do workspace
+Então o pesquisador recebe um alerta sobre o arquivo não anexado"
+"C37","claude","zero-shot","REF_C37.feature","CLAU_ZS_C37.feature","Funcionalidade: Baixar arquivos anexados a um experimento
+
+Cenário: Baixar arquivos anexados a um experimento pelo navegador
+Dado que o pesquisador possui arquivos anexados a um experimento
+Quando realizar o download dos arquivos pelo navegador
+Então os arquivos devem ser disponibilizados para download","Funcionalidade: Download de arquivos anexados a um experimento
+
+Cenário: Pesquisador realiza o download de um arquivo anexado a um experimento pelo navegador Web
+Dado que o pesquisador visualiza um experimento com um arquivo anexado
+Quando ele solicita o download do arquivo anexado utilizando o navegador Web
+Então o arquivo anexado é baixado com sucesso"
+"C38","claude","zero-shot","REF_C38.feature","CLAU_ZS_C38.feature","Funcionalidade: Realizar upload de arquivos maiores que 1 GB
+
+Cenário: Realizar upload de arquivos com mais de 1GB
+Dado que o usuário acessa o sistema
+Quando realizar o upload de arquivos
+Então deve ser possível anexar para upload aqueles com mais de 1 GB de tamanho","Funcionalidade: Upload de arquivos grandes
+
+Cenário: Usuário realiza upload de um arquivo com mais de 1GB
+Dado que o usuário possui um arquivo com tamanho superior a 1GB
+Quando o usuário realiza o upload do arquivo
+Então o arquivo é carregado com sucesso"
+"C39","claude","zero-shot","REF_C39.feature","CLAU_ZS_C39.feature","Funcionalidade: Atribuir tags a arquivos enviados
+
+Cenário: Atribuir tags a arquivos enviados
+Dado que o usuário possui arquivos enviados
+Quando atribuir tags aos arquivos
+Então os arquivos devem ficar associados às tags atribuídas","Funcionalidade: Atribuição de tags a arquivos enviados
+
+Cenário: Usuário atribui uma tag a um arquivo enviado
+Dado que o usuário possui um arquivo enviado
+Quando o usuário atribui uma tag a esse arquivo
+Então o arquivo passa a exibir a tag atribuída"
+"C40","claude","zero-shot","REF_C40.feature","CLAU_ZS_C40.feature","Funcionalidade: Filtrar arquivos por tipo
+
+Cenário: Filtrar arquivos com base no tipo
+Dado que o usuário realizou uma pesquisa por arquivos
+Quando filtrar os resultados pelo tipo de arquivo
+Então o sistema deve exibir apenas os arquivos correspondentes ao tipo selecionado","Funcionalidade: Filtragem de arquivos por tipo nos resultados de busca
+
+Cenário: Usuário filtra os resultados de busca por tipo de arquivo
+Dado que o usuário possui resultados de busca contendo arquivos de diferentes tipos
+Quando o usuário aplica um filtro por tipo de arquivo
+Então o sistema exibe apenas os arquivos do tipo selecionado"
+"C41","claude","zero-shot","REF_C41.feature","CLAU_ZS_C41.feature","Funcionalidade: Restaurar arquivos excluídos
+
+Cenário: Restaurar arquivos deletados
+Dado que o usuário possui arquivos que foram deletados
+Quando restaurar um arquivo 
+Então o arquivo deve ser restaurado e ficar novamente disponível para o usuário","Funcionalidade: Restauração de arquivos excluídos
+
+Cenário: Restaurar um arquivo excluído acidentalmente
+Dado que o usuário possui um arquivo excluído
+Quando o usuário restaura o arquivo excluído
+Então o arquivo torna-se disponível novamente para o usuário"
+"C42","claude","zero-shot","REF_C42.feature","CLAU_ZS_C42.feature","Funcionalidade: Pesquisar arquivos
+
+Cenário: Pesquisar especificamente por arquivosa
+Dado que o usuário realiza uma pesquisa
+Quando pesquisar especificamente por arquivos
+Então o sistema deve exibir resultados referentes aos arquivos, sem incluir páginas do livro de registros","Funcionalidade: Busca específica por arquivos
+
+Cenário: Usuário busca especificamente por arquivos em vez de páginas de diário
+Dado que o usuário está na funcionalidade de busca
+Quando o usuário realiza uma busca especificamente por arquivos
+Então o sistema exibe apenas arquivos como resultado da busca"
+"C43","claude","zero-shot","REF_C43.feature","CLAU_ZS_C43.feature","Funcionalidade: Baixar arquivos pelos resultados da pesquisa
+
+Cenário: Realizar download de arqivos buscados
+Dado que o usuário realizou uma busca
+Quando visualizar os resultados
+Então deve ser possível realizar o download de arquivos direto da listagem de resultados da busca","Funcionalidade: Download de arquivos a partir da página de resultados de busca
+
+Cenário: Usuário baixa um arquivo diretamente da página de resultados de busca
+Dado que o usuário está na página de resultados de busca
+Quando o usuário solicita o download de um arquivo
+Então o arquivo é baixado com sucesso"
+"C44","claude","zero-shot","REF_C44.feature","CLAU_ZS_C44.feature","Funcionalidade: Anexar múltiplos arquivos a uma página do livro de registros
+
+Cenário: Anexar múltiplos arquivos a uma página do livro de registros
+Dado que o usuário acessa uma página do livro de registros
+Quando anexar múltiplos arquivos à página
+Então os arquivos devem ser anexados à página do livro de registros","Funcionalidade: Anexação de múltiplos arquivos a uma página do diário de bordo
+
+Cenário: Usuário anexa múltiplos arquivos de uma vez a uma página do diário de bordo
+Dado que o usuário está em uma página do diário de bordo
+Quando ele seleciona múltiplos arquivos para anexar de uma vez
+Então os arquivos selecionados são anexados à página do diário de bordo"
+"C45","claude","zero-shot","REF_C45.feature","CLAU_ZS_C45.feature","Funcionalidade: Baixar múltiplos arquivos dos resultados da pesquisa
+
+Cenário: Baixar múltiplos arquivos dos resultados da pesquisa
+Dado que o usuário possui múltiplos arquivos nos resultados da pesquisa
+Quando realizar o download dos arquivos
+Então o sistema deve permitir baixar os múltiplos arquivos de uma só vez","Funcionalidade: Download de múltiplos arquivos dos resultados de busca
+
+Cenário: Usuário baixa múltiplos arquivos selecionados nos resultados de busca em uma única ação
+Dado que o usuário possui múltiplos arquivos selecionados nos resultados de busca
+Quando o usuário solicita o download dos arquivos selecionados
+Então o sistema realiza o download de todos os arquivos selecionados em uma única ação"

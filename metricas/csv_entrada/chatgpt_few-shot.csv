@@ -1,0 +1,498 @@
+﻿"cenario","modelo","prompt","arquivo_referencia","arquivo_gerado","referencia","gerado"
+"C01","chatgpt","few-shot","REF_C01.feature","GPT_FS_C01.feature","Funcionalidade: Acessar arquivos publicados
+
+Cenário: Visualizar arquivos FABS publicados
+Dado que o usuário acessa o sistema
+Quando acessar a seção de arquivos FABS publicados
+Então deve visualizar os arquivos FABS já publicados e deve visualizar novos arquivos à medida que eles forem publicados","Funcionalidade: Acessar arquivos FABS publicados
+
+Cenário: Acessar arquivos FABS publicados
+Dado que existem arquivos FABS publicados
+Quando o usuário do site acessa os arquivos FABS publicados
+Então o sistema apresenta os novos arquivos FABS publicados"
+"C02","chatgpt","few-shot","REF_C02.feature","GPT_FS_C02.feature","Funcionalidade: Visualizar dados de assistência financeira atualizados
+
+Cenário: Visualizar dados de assistência financeira atualizados diariamente
+Dado que o usuário acessa o sistema
+Quando acessar os dados de assistência financeira
+Então deve visualizar os dados atualizados diariamente","Funcionalidade: Consultar dados atualizados de assistência financeira
+
+Cenário: Consultar dados de assistência financeira atualizados diariamente
+Dado que o usuário do site consulta os dados de assistência financeira
+Quando os dados de assistência financeira são atualizados diariamente
+Então o usuário do site visualiza os dados de assistência financeira atualizados"
+"C03","chatgpt","few-shot","REF_C03.feature","GPT_FS_C03.feature","Funcionalidade: Controlar publicação de arquivos FABS durante o processamento
+
+Cenário: Desativar botão de publicar arquivos FABS durante o processamento
+Dado que o usuário acessa o sistema
+Quando clicar no botão de publicar arquivos FABS
+Então o botão de publicar deve ser desativado enquanto o processamento ocorre enão deve ser permitido realizar múltiplos cliques no mesmo envio","Funcionalidade: Desativar o botão de publicação no FABS durante as derivações
+
+Cenário: Desativar o botão de publicação após o clique
+Dado que as derivações estão acontecendo
+Quando o usuário clica no botão de publicação
+Então o botão de publicação fica desativado durante as derivações"
+"C04","chatgpt","few-shot","REF_C04.feature","GPT_FS_C04.feature","Funcionalidade: Validar registros de empréstimos  
+
+Cenário: Aceitar valores zero e em branco para registros de empréstimos
+Dado que o usuário da agência acessa o sistema
+Quando enviar registros de empréstimos com valores zero ou em branco
+Então o sistema deve aceitar esses registros sem erros de validação","Funcionalidade: Aceitar zero e branco nas regras de validação FABS para registros de empréstimo
+
+Cenário: Aceitar zero e branco nas regras de validação FABS para registros de empréstimo
+Dado que o usuário da agência possui registros de empréstimo
+Quando o usuário da agência realiza a validação FABS dos registros de empréstimo com zero e branco
+Então as regras de validação FABS aceitam zero e branco nos registros de empréstimo"
+"C05","chatgpt","few-shot","REF_C05.feature","GPT_FS_C05.feature","Funcionalidade: Validar data e hora de atualização 
+
+Cenário: Mostrar data e hora de atualização na caixa de informações do cabeçalho
+Dado que o usuário da agência acessa o sistema
+Quando visualizar a caixa de informações do cabeçalho
+Então o sistema deve exibir a data e hora de atualização corretamente","Funcionalidade: Exibir data e hora atualizadas no cabeçalho
+
+Cenário: Exibir data e hora da atualização
+Dado que o usuário da agência visualiza a caixa de informações do cabeçalho
+Quando a caixa de informações do cabeçalho é atualizada
+Então o usuário da agência visualiza a data e a hora atualizadas"
+"C06","chatgpt","few-shot","REF_C06.feature","GPT_FS_C06.feature","Funcionalidade: Validar extensão de arquivo durante o upload
+
+Cenário: Exibir mensagem de erro ao enviar um arquivo com extensão incorreta
+Dado que o usuário da agência acessa o sistema
+Quando realizar o upload de um arquivo com extensão incorreta
+Então o sistema deve exibir uma mensagem de erro relacionada à extensão do arquivo","Funcionalidade: Receber um erro mais útil ao enviar arquivo com extensão incorreta
+
+Cenário: Receber erro mais útil ao enviar arquivo com extensão incorreta
+Dado que o usuário da agência possui um arquivo com extensão incorreta
+Quando o usuário da agência envia o arquivo
+Então o sistema apresenta um erro mais útil relacionado ao arquivo"
+"C07","chatgpt","few-shot","REF_C07.feature","GPT_FS_C07.feature","Funcionalidade: Exibir informações do criador da submissão
+
+Cenário: Exibir informações precisas sobre o criador da submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar uma submissão
+Então o sistema deve exibir corretamente o nome do usuário que criou a submissão","Funcionalidade: Identificar quem criou uma submissão
+
+Cenário: Identificar o usuário que criou a submissão
+Dado que o usuário da agência possui uma submissão criada
+Quando o usuário da agência consulta a submissão
+Então o sistema apresenta quem criou a submissão"
+"C08","chatgpt","few-shot","REF_C08.feature","GPT_FS_C08.feature","Funcionalidade: Navegar entre FABS e DABS
+
+Cenário: Navegar para páginas FABS ou DABS a partir da página inicial
+Dado que o usuário da agência acessa a página inicial
+Quando realizar a navegação para FABS ou DABS
+Então o sistema deve redirecionar o usuário para a página da área correspondente","Funcionalidade: Navegar para as páginas FABS ou DABS
+
+Cenário: Navegar para as páginas FABS ou DABS
+Dado que o usuário da agência está na página inicial
+Quando o usuário da agência navega para uma das páginas FABS ou DABS
+Então o sistema direciona o usuário da agência para a página selecionada"
+"C09","chatgpt","few-shot","REF_C09.feature","GPT_FS_C09.feature","Funcionalidade: Consultar período de submissão
+
+Cenário: Exibir informações sobre o período de submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar as informações de submissão
+Então o sistema deve exibir as datas de início e término do período de submissão","Funcionalidade: Consultar períodos de submissão
+
+Cenário: Consultar início e fim do período de submissão
+Dado que o usuário da agência pode consultar os períodos de submissão
+Quando o usuário da agência consulta os períodos de submissão
+Então o sistema apresenta quando os períodos de submissão começam e terminam"
+"C10","chatgpt","few-shot","REF_C10.feature","GPT_FS_C10.feature","Funcionalidade: Consultar número de linhas a serem publicadas
+
+Cenário: Exibir informações sobre o número de linhas a serem publicadas
+Dado que o usuário acessa o sistema e está na página de submissão
+Quando visualizar as informações de submissão
+Então o sistema deve exibir claramente o número de linhas que serão publicadas","Funcionalidade: Consultar quantidade de linhas a serem publicadas
+
+Cenário: Consultar quantidade de linhas antes da publicação
+Dado que o usuário está prestes a decidir se deseja publicar
+Quando o usuário consulta quantas linhas serão publicadas
+Então o sistema apresenta a quantidade de linhas que serão publicadas"
+"C11","chatgpt","few-shot","REF_C11.feature","GPT_FS_C11.feature","Funcionalidade: Consultar informações do painel de submissão
+
+Cenário: Exibir informações adicionais no painel de submissão
+Dado que o usuário FABS acessa o painel de submissão
+Quando visualizar o painel de submissão
+Então o sistema deve exibir informações adicionais para melhor gerenciar submissões e solicitações de IG","Funcionalidade: Consultar informações adicionais no painel de submissões
+
+Cenário: Consultar informações adicionais no painel de submissões
+Dado que o usuário FABS acessa o painel de submissões
+Quando o usuário FABS consulta o painel de submissões
+Então o sistema apresenta informações adicionais para auxiliar o gerenciamento de submissões e solicitações IG"
+"C12","chatgpt","few-shot","REF_C12.feature","GPT_FS_C12.feature","Funcionalidade: Cadastrar conta de editor
+
+Cenário: Realizar cadastro de conta de editor
+Dado que o usuário acessa o sistema e deseja possuir uma conta de editor
+Quando realizar o cadastro
+Então deve possuir uma conta de editor para publicar seus pacotes de dados","Funcionalidade: Cadastrar conta de publicador
+
+Cenário: Cadastrar uma conta de publicador
+Dado que o publicador não possui uma conta
+Quando o publicador se cadastra para uma conta
+Então o publicador possui uma conta para publicar seu pacote de dados no registro"
+"C13","chatgpt","few-shot","REF_C13.feature","GPT_FS_C13.feature","Funcionalidade: Importar pacote de dados
+
+Cenário: Importar pacote de dados para o registro
+Dado que o editor acessa o sistema e possui pacotes de dados para importação
+Quando importar um pacote de dados para o registro
+Então o pacote de dados deve permanecer disponível online para acesso futuro","Funcionalidade: Importar pacote de dados no registro
+
+Cenário: Importar pacote de dados no registro
+Dado que o publicador possui um pacote de dados
+Quando o publicador importa seu pacote de dados no registro
+Então o pacote de dados possui um local permanente online para acesso"
+"C14","chatgpt","few-shot","REF_C14.feature","GPT_FS_C14.feature","Funcionalidade: Despublicar pacote de dados
+
+Cenário: Despublicar pacotes de dados
+Dado que o editor acessa o sistema e possui pacotes de dados publicados
+Quando despublicar um pacote de dados
+Então o pacote de dados não deve mais ser visível para os demais usuários","Funcionalidade: Despublicar pacote de dados
+
+Cenário: Despublicar um pacote de dados
+Dado que o pacote de dados está publicado
+Quando o editor despublica o pacote de dados
+Então o pacote de dados deixa de estar visível para qualquer pessoa"
+"C15","chatgpt","few-shot","REF_C15.feature","GPT_FS_C15.feature","Funcionalidade: Criar pacote de dados
+
+Cenário: Criar pacote de dados pela interface
+Dado que o editor acessa o sistema
+Quando criar um pacote de dados pela interface
+Então o pacote de dados deve ficar disponível e publicado","Funcionalidade: Criar pacote de dados
+
+Cenário: Criar pacote de dados na interface
+Dado que o publicador está na interface
+Quando o publicador cria um pacote de dados
+Então o pacote de dados fica disponível e publicado"
+"C16","chatgpt","few-shot","REF_C16.feature","GPT_FS_C16.feature","Funcionalidade: Restaurar pacote de dados excluído
+
+Cenário: Restaurar pacotes de dados excluídos
+Dado que o editor acessa o sistema e possui pacotes de dados excluídos
+Quando restaurar um pacote de dados excluído
+Então o pacote de dados deve se tornar visível novamente para os demais usuários","Funcionalidade: Restaurar pacotes de dados excluídos
+
+Cenário: Restaurar pacotes de dados excluídos
+Dado que o publicador possui pacotes de dados excluídos
+Quando o publicador restaura os pacotes de dados excluídos
+Então os pacotes de dados excluídos ficam visíveis novamente"
+"C17","chatgpt","few-shot","REF_C17.feature","GPT_FS_C17.feature","Funcionalidade: Pesquisar pacotes de dados
+
+Cenário: Pesquisar pacotes de dados
+Dado que o usuário acessa o sistema  
+Quando realizar uma pesquisa por pacotes de dados
+Então o sistema deve exibir os pacotes de dados correspondentes aos critérios da pesquisa","Funcionalidade: Pesquisar pacotes de dados
+
+Cenário: Pesquisar pacotes de dados
+Dado que o consumidor deseja encontrar pacotes de dados
+Quando o consumidor pesquisa pacotes de dados
+Então o sistema apresenta os pacotes de dados encontrados"
+"C18","chatgpt","few-shot","REF_C18.feature","GPT_FS_C18.feature","Funcionalidade: Baixar pacote de dados em arquivo único
+
+Cenário: Baixar pacote de dados em um único arquivo
+Dado que o usuário possui um pacote de dados disponível
+Quando realizar o download de um pacote de dados
+Então o sistema deve fornecer o pacote de dados completo em um único arquivo para download","Funcionalidade: Baixar pacote de dados em um único arquivo
+
+Cenário: Baixar pacote de dados em um único arquivo
+Dado que o consumidor possui um pacote de dados
+Quando o consumidor baixa o pacote de dados
+Então o sistema disponibiliza o pacote de dados em um único arquivo"
+"C19","chatgpt","few-shot","REF_C19.feature","GPT_FS_C19.feature","Funcionalidade: Editar perfil do proprietário
+
+Cenário: Editar perfil do proprietário
+Dado que o proprietário acessa o sistema
+Quando realizar alterações em seu perfil
+Então o sistema deve atualizar as informações do perfil com os novos dados fornecidos","Funcionalidade: Editar perfil
+
+Cenário: Editar perfil do proprietário
+Dado que o proprietário possui um perfil
+Quando o proprietário edita seu perfil com novas informações
+Então o perfil do proprietário é atualizado com as novas informações"
+"C20","chatgpt","few-shot","REF_C20.feature","GPT_FS_C20.feature","Funcionalidade: Adicionar usuário como membro de uma editora
+
+Cenário: Convidar usuário existente para se tornar membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando convidar um usuário existente para se tornar membro de sua editora
+Então o usuário deve poder se tornar membro da editora","Funcionalidade: Convidar usuário existente para se tornar membro da editora
+
+Cenário: Convidar usuário existente
+Dado que o usuário já existe
+Quando o proprietário o convida para sua editora
+Então o usuário pode se tornar membro da editora"
+"C21","chatgpt","few-shot","REF_C21.feature","GPT_FS_C21.feature","Funcionalidade: Remover membro de uma editora
+
+Cenário: Remover membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando remover um membro de sua editora
+Então o membro não deve mais ter a capacidade de publicar ou modificar os pacotes de dados da editora","Funcionalidade: Remover alguém da associação do publicador
+
+Cenário: Remover alguém da associação do publicador
+Dado que alguém é membro do publicador do proprietário
+Quando o proprietário remove alguém da associação do publicador
+Então essa pessoa deixa de ter capacidade de publicar ou modificar os pacotes de dados do proprietário"
+"C22","chatgpt","few-shot","REF_C22.feature","GPT_FS_C22.feature","Funcionalidade: Conceder propriedade de uma editora
+
+Cenário: Tornar um usuário proprietário
+Dado que o proprietário acessa o sistema
+Quando tornar um usuário proprietário
+Então o usuário deve ter controle total sobre a editora e seus pacotes de dados","Funcionalidade: Tornar um usuário proprietário
+
+Cenário: Tornar um usuário proprietário
+Dado que o usuário não é proprietário
+Quando o proprietário torna o usuário proprietário
+Então o usuário passa a ter controle total"
+"C23","chatgpt","few-shot","REF_C23.feature","GPT_FS_C23.feature","Funcionalidade: Remover usuário como proprietário
+
+Cenário: Remover um usuário como proprietário
+Dado que o proprietário acessa o sistema
+Quando remover um usuário como proprietário
+Então o usuário deve se tornar apenas um membro e não ter mais controle total sobre a editora e seus pacotes de dados","Funcionalidade: Remover usuário como proprietário
+
+Cenário: Remover usuário da condição de proprietário
+Dado que o usuário é proprietário
+Quando o proprietário remove o usuário como proprietário
+Então o usuário permanece apenas como membro e deixa de ter controle total"
+"C24","chatgpt","few-shot","REF_C24.feature","GPT_FS_C24.feature","Funcionalidade: Aplicar restrição no sistema
+
+Cenário: Aplicar uma restrição 
+Dado que um membro da equipe acessa o sistema
+Quando aplicar uma restrição
+Então o sistema deve impedir a progressão através do workflow ou outras ações no sistema até que o problema seja resolvido","Funcionalidade: Aplicar uma retenção
+
+Cenário: Impedir a progressão no fluxo de trabalho
+Dado que o membro da equipe identifica uma questão não resolvida
+Quando o membro da equipe aplica uma retenção
+Então o sistema impede a progressão no fluxo de trabalho até que a questão seja resolvida"
+"C25","chatgpt","few-shot","REF_C25.feature","GPT_FS_C25.feature","Funcionalidade: Remover restrição no sistema
+
+Cenário: Remover uma restrição
+Dado que um membro da equipe acessa o sistema
+Quando remover uma restrição
+Então o sistema deve permitir a progressão através do workflow ou outras ações no sistema agora que o problema foi resolvido","Funcionalidade: Remover uma retenção
+
+Cenário: Remover uma retenção resolvida
+Dado que o membro da equipe possui uma retenção relacionada a uma questão resolvida
+Quando o membro da equipe remove a retenção
+Então o fluxo de trabalho ou outras ações no sistema podem prosseguir"
+"C26","chatgpt","few-shot","REF_C26.feature","GPT_FS_C26.feature","Funcionalidade: Consultar status de transações
+
+Cenário: Consultar status de uma transação 
+Dado que um solicitante acessa o sistema
+Quando verificar o status da transação
+Então deve visualizar a etapa do processo em que se encontra o provisionamento do serviço","Funcionalidade: Consultar status de uma transação
+
+Cenário: Consultar status da transação
+Dado que o solicitante possui uma transação em processo de provisionamento do serviço
+Quando o solicitante consulta o status da transação
+Então o sistema apresenta o status do provisionamento do serviço, incluindo informações relacionadas a níveis de serviço, taxas, revisão do plano, autorização ou resultados de inspeção"
+"C27","chatgpt","few-shot","REF_C27.feature","GPT_FS_C27.feature","Funcionalidade: Criar conta no Portal do Cliente
+
+Cenário: Criar conta de usuário do Portal do Cliente
+Dado que o usuário acessa o Portal do cliente
+Quando realizar o cadastro
+Então deve poder realizar login 
+E deve poder acessar transações que necessitam de autenticação","Funcionalidade: Criar uma conta de usuário do Portal do Cliente
+
+Cenário: Criar uma conta de usuário do Portal do Cliente
+Dado que o cliente não possui uma conta de usuário do Portal do Cliente
+Quando o cliente cria uma conta de usuário do Portal do Cliente
+Então o cliente pode acessar o Portal do Cliente e realizar transações que exigem autenticação do usuário"
+"C28","chatgpt","few-shot","REF_C28.feature","GPT_FS_C28.feature","Funcionalidade: Enviar solicitação
+
+Cenário: Realizar envio de solicitação
+Dado que o solicitante acessa o sistema
+Quando enviar uma solicitação com suas informações, planos e/ou documentos
+Então a solicitação deve ser enviada para iniciar uma transação com o Condado","Funcionalidade: Enviar solicitação
+
+Cenário: Enviar solicitação para iniciar uma transação com o Condado
+Dado que o solicitante possui suas informações, planos e/ou documentos
+Quando o solicitante envia a solicitação
+Então as informações, planos e/ou documentos são fornecidos ao Condado para iniciar uma transação"
+"C29","chatgpt","few-shot","REF_C29.feature","GPT_FS_C29.feature","Funcionalidade: Enviar documentação de suporte
+
+Cenário: Enviar documentação de suporte
+Dado que o solicitante possui uma solicitação
+Quando enviar a documentação de suporte da solicitação
+Então a documentação deve ser enviada para atender aos requisitos documentais da solicitação","Funcionalidade: Enviar documentação comprobatória
+
+Cenário: Enviar documentação comprobatória para a candidatura
+Dado que o candidato possui uma candidatura
+Quando o candidato envia a documentação comprobatória
+Então o sistema considera atendidos os requisitos de documentação da candidatura"
+"C30","chatgpt","few-shot","REF_C30.feature","GPT_FS_C30.feature","Funcionalidade: Receber notificação de alteração de atributos geoespaciais
+
+Cenário: Notificar alteração de atributos geoespaciais
+Dado que o membro da equipe está revisando uma solicitação ou permissão
+Quando os atributos geoespaciais forem alterados
+Então o membro da equipe deve ser notificado sobre a alteração","Funcionalidade: Notificar alteração de atributos geoespaciais
+
+Cenário: Notificar o membro da equipe sobre alteração de atributos geoespaciais
+Dado que os atributos geoespaciais foram alterados
+Quando o membro da equipe é notificado sobre a alteração dos atributos geoespaciais
+Então o membro da equipe é notificado sobre a alteração dos atributos geoespaciais"
+"C31","chatgpt","few-shot","REF_C31.feature","GPT_FS_C31.feature","Funcionalidade: Criar inspeção
+
+Cenário: Criar uma inspeção
+Dado que o membro da equipe de inspeção acessa o sistema
+Quando criar uma inspeção
+Então a inspeção deve ser criada e estar disponível para agendamento e atribuição","Funcionalidade: Criar uma inspeção
+
+Cenário: Criar uma inspeção
+Dado que o membro da equipe de inspeção está apto a criar uma inspeção
+Quando o membro da equipe de inspeção cria uma inspeção
+Então a inspeção é criada para ser agendada e atribuída"
+"C32","chatgpt","few-shot","REF_C32.feature","GPT_FS_C32.feature","Funcionalidade: Revisar modificações de código
+
+Cenário: Revisar modificações de código submetidas pelo solicitante
+Dado que o membro da equipe de análise de projetos acessa uma solicitação com modificações de código submetidas pelo solicitante
+Quando revisar as modificações de código
+Então deve poder revisar a solicitação
+E se aprovada, deve poder associá-la ao projeto apropriado","Funcionalidade: Revisar modificações de código submetidas pelo requerente
+
+Cenário: Revisar modificações de código submetidas pelo requerente
+Dado que o requerente submeteu modificações de código
+Quando o membro da equipe de revisão de planos revisa as modificações de código
+Então o membro da equipe de revisão de planos pode revisar a solicitação e, se aprovada, associá-la ao projeto apropriado"
+"C33","chatgpt","few-shot","REF_C33.feature","GPT_FS_C33.feature","Funcionalidade: Gerenciar carga de trabalho dos analistas de projetos
+
+Cenário: Gerenciar carga de trabalho dos analistas de projetos
+Dado que o supervisor da equipe de análise de projetos acessa o sistema
+Quando gerenciar a carga de trabalho dos analistas de projetos
+Então deve poder monitorar e ajustar a carga de trabalho conforme necessário para garantir os níveis de serviço","Funcionalidade: Gerenciar carga de trabalho dos revisores de planos
+
+Cenário: Gerenciar carga de trabalho dos revisores de planos
+Dado que o supervisor da equipe de revisão de planos precisa monitorar a carga de trabalho dos revisores de planos
+Quando o supervisor da equipe de revisão de planos gerencia a carga de trabalho dos revisores de planos
+Então o supervisor da equipe de revisão de planos consegue monitorar e ajustar a carga de trabalho conforme necessário para garantir os níveis de serviço"
+"C34","chatgpt","few-shot","REF_C34.feature","GPT_FS_C34.feature","Funcionalidade: Realizar upload prévio de arquivos
+
+Cenário: Fazer upload de arquivos para anexá-los a uma página
+Dado que o pesquisador acessa o sistema pela interface web
+Quando realizar o upload de arquivos
+Então os arquivos devem ficar disponíveis para serem anexados posteriormente a uma página do livro de registros","Funcionalidade: Carregar arquivos antes de anexá-los a uma página do livro de registros
+
+Cenário: Carregar arquivos antes de anexá-los a uma página do livro de registros
+Dado que o pesquisador acessa a interface web
+Quando o pesquisador carrega arquivos
+Então os arquivos ficam disponíveis para serem anexados a uma página do livro de registros"
+"C35","chatgpt","few-shot","REF_C35.feature","GPT_FS_C35.feature","Funcionalidade: Anexar arquivos a uma página do livro de registros
+
+Cenário: Anexar arquivos não associados a uma página
+Dado que o pesquisador possui arquivos que não estão anexados a uma página do livro de registros
+Quando anexar os arquivos a uma página do livro de registros
+Então os arquivos devem ficar anexados à página do livro de registros","Funcionalidade: Anexar arquivos não anexados à página do livro de registros
+
+Cenário: Anexar arquivos atualmente não anexados
+Dado que o pesquisador possui arquivos atualmente não anexados
+Quando o pesquisador anexa os arquivos à página do livro de registros
+Então os arquivos ficam anexados à página do livro de registros"
+"C36","chatgpt","few-shot","REF_C36.feature","GPT_FS_C36.feature","Funcionalidade: Receber alerta sobre arquivos não anexados
+
+Cenário: Alertar sobre arquivos não anexados
+Dado que o pesquisador possui arquivos em seu espaço de trabalho
+Quando houverem arquivos não estão anexados no espaço de trabalho
+Então o pesquisador deve receber um alerta sobre os arquivos não anexados","Funcionalidade: Receber alerta sobre arquivos não anexados no espaço de trabalho
+
+Cenário: Receber alerta sobre arquivos não anexados
+Dado que o pesquisador possui arquivos não anexados em seu espaço de trabalho
+Quando o pesquisador possui arquivos não anexados em seu espaço de trabalho
+Então o pesquisador recebe um alerta sobre os arquivos não anexados"
+"C37","chatgpt","few-shot","REF_C37.feature","GPT_FS_C37.feature","Funcionalidade: Baixar arquivos anexados a um experimento
+
+Cenário: Baixar arquivos anexados a um experimento pelo navegador
+Dado que o pesquisador possui arquivos anexados a um experimento
+Quando realizar o download dos arquivos pelo navegador
+Então os arquivos devem ser disponibilizados para download","Funcionalidade: Baixar arquivos anexados a um experimento
+
+Cenário: Baixar arquivo anexado a um experimento pelo navegador Web
+Dado que o pesquisador possui um experimento com arquivos anexados
+Quando o pesquisador baixa um arquivo anexado ao experimento usando o navegador Web
+Então o arquivo anexado é baixado pelo navegador Web"
+"C38","chatgpt","few-shot","REF_C38.feature","GPT_FS_C38.feature","Funcionalidade: Realizar upload de arquivos maiores que 1 GB
+
+Cenário: Realizar upload de arquivos com mais de 1GB
+Dado que o usuário acessa o sistema
+Quando realizar o upload de arquivos
+Então deve ser possível anexar para upload aqueles com mais de 1 GB de tamanho","Funcionalidade: Enviar arquivos grandes
+
+Cenário: Enviar arquivo com mais de 1GB
+Dado que o usuário possui um arquivo com mais de 1GB
+Quando o usuário envia o arquivo
+Então o sistema realiza o envio do arquivo"
+"C39","chatgpt","few-shot","REF_C39.feature","GPT_FS_C39.feature","Funcionalidade: Atribuir tags a arquivos enviados
+
+Cenário: Atribuir tags a arquivos enviados
+Dado que o usuário possui arquivos enviados
+Quando atribuir tags aos arquivos
+Então os arquivos devem ficar associados às tags atribuídas","Funcionalidade: Atribuir tags a arquivos enviados
+
+Cenário: Atribuir tags a arquivo enviado
+Dado que o usuário possui um arquivo enviado
+Quando o usuário atribui tags ao arquivo
+Então o arquivo possui as tags atribuídas pelo usuário"
+"C40","chatgpt","few-shot","REF_C40.feature","GPT_FS_C40.feature","Funcionalidade: Filtrar arquivos por tipo
+
+Cenário: Filtrar arquivos com base no tipo
+Dado que o usuário realizou uma pesquisa por arquivos
+Quando filtrar os resultados pelo tipo de arquivo
+Então o sistema deve exibir apenas os arquivos correspondentes ao tipo selecionado","Funcionalidade: Filtrar arquivos dos resultados da pesquisa
+
+Cenário: Filtrar arquivos por tipo
+Dado que o usuário possui resultados de pesquisa com arquivos de diferentes tipos
+Quando o usuário filtra os arquivos dos resultados da pesquisa por tipo
+Então o sistema apresenta os arquivos correspondentes ao tipo selecionado"
+"C41","chatgpt","few-shot","REF_C41.feature","GPT_FS_C41.feature","Funcionalidade: Restaurar arquivos excluídos
+
+Cenário: Restaurar arquivos deletados
+Dado que o usuário possui arquivos que foram deletados
+Quando restaurar um arquivo 
+Então o arquivo deve ser restaurado e ficar novamente disponível para o usuário","Funcionalidade: Restaurar arquivos excluídos acidentalmente
+
+Cenário: Restaurar arquivo excluído
+Dado que o usuário possui um arquivo que pode ser excluído acidentalmente
+Quando o usuário exclui o arquivo
+Então o arquivo pode ser restaurado"
+"C42","chatgpt","few-shot","REF_C42.feature","GPT_FS_C42.feature","Funcionalidade: Pesquisar arquivos
+
+Cenário: Pesquisar especificamente por arquivosa
+Dado que o usuário realiza uma pesquisa
+Quando pesquisar especificamente por arquivos
+Então o sistema deve exibir resultados referentes aos arquivos, sem incluir páginas do livro de registros","Funcionalidade: Pesquisar especificamente por arquivos
+
+Cenário: Pesquisar arquivos em vez de páginas do livro de registros
+Dado que existem arquivos e páginas do livro de registros disponíveis para pesquisa
+Quando o usuário realiza uma pesquisa especificamente por arquivos
+Então o sistema apresenta os arquivos correspondentes à pesquisa"
+"C43","chatgpt","few-shot","REF_C43.feature","GPT_FS_C43.feature","Funcionalidade: Baixar arquivos pelos resultados da pesquisa
+
+Cenário: Realizar download de arqivos buscados
+Dado que o usuário realizou uma busca
+Quando visualizar os resultados
+Então deve ser possível realizar o download de arquivos direto da listagem de resultados da busca","Funcionalidade: Baixar arquivos diretamente da página de resultados da pesquisa
+
+Cenário: Baixar arquivo a partir dos resultados da pesquisa
+Dado que o usuário possui resultados de pesquisa com arquivos
+Quando o usuário baixa um arquivo diretamente da página de resultados da pesquisa
+Então o arquivo é baixado pelo usuário"
+"C44","chatgpt","few-shot","REF_C44.feature","GPT_FS_C44.feature","Funcionalidade: Anexar múltiplos arquivos a uma página do livro de registros
+
+Cenário: Anexar múltiplos arquivos a uma página do livro de registros
+Dado que o usuário acessa uma página do livro de registros
+Quando anexar múltiplos arquivos à página
+Então os arquivos devem ser anexados à página do livro de registros","Funcionalidade: Anexar múltiplos arquivos de uma vez à página do livro de registros
+
+Cenário: Anexar múltiplos arquivos à página do livro de registros
+Dado que o usuário está em uma página do livro de registros
+Quando o usuário anexa múltiplos arquivos de uma vez à página
+Então os múltiplos arquivos são anexados à página do livro de registros"
+"C45","chatgpt","few-shot","REF_C45.feature","GPT_FS_C45.feature","Funcionalidade: Baixar múltiplos arquivos dos resultados da pesquisa
+
+Cenário: Baixar múltiplos arquivos dos resultados da pesquisa
+Dado que o usuário possui múltiplos arquivos nos resultados da pesquisa
+Quando realizar o download dos arquivos
+Então o sistema deve permitir baixar os múltiplos arquivos de uma só vez","Funcionalidade: Baixar múltiplos arquivos dos resultados da busca
+
+Cenário: Baixar múltiplos arquivos dos resultados da busca de uma vez
+Dado que o usuário possui múltiplos arquivos nos resultados da busca
+Quando o usuário baixa os múltiplos arquivos dos resultados da busca de uma vez
+Então os múltiplos arquivos são baixados de uma vez"

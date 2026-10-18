@@ -1,0 +1,498 @@
+﻿"cenario","modelo","prompt","arquivo_referencia","arquivo_gerado","referencia","gerado"
+"C01","gemini","few-shot","REF_C01.feature","GEM_FS_C01.feature","Funcionalidade: Acessar arquivos publicados
+
+Cenário: Visualizar arquivos FABS publicados
+Dado que o usuário acessa o sistema
+Quando acessar a seção de arquivos FABS publicados
+Então deve visualizar os arquivos FABS já publicados e deve visualizar novos arquivos à medida que eles forem publicados","Funcionalidade: Acessar arquivos FABS publicados
+
+Cenário: Acessar arquivos FABS publicados
+Dado que o usuário do site possui arquivos FABS publicados
+Quando o usuário do site acessa os arquivos FABS publicados
+Então o sistema apresenta os novos arquivos FABS disponibilizados"
+"C02","gemini","few-shot","REF_C02.feature","GEM_FS_C02.feature","Funcionalidade: Visualizar dados de assistência financeira atualizados
+
+Cenário: Visualizar dados de assistência financeira atualizados diariamente
+Dado que o usuário acessa o sistema
+Quando acessar os dados de assistência financeira
+Então deve visualizar os dados atualizados diariamente","Funcionalidade: Visualizar dados de assistência financeira atualizados diariamente
+
+Cenário: Visualizar dados de assistência financeira atualizados
+Dado que o usuário do site acessa o site
+Quando o usuário consulta os dados de assistência financeira
+Então o sistema apresenta os dados de assistência financeira atualizados diariamente"
+"C03","gemini","few-shot","REF_C03.feature","GEM_FS_C03.feature","Funcionalidade: Controlar publicação de arquivos FABS durante o processamento
+
+Cenário: Desativar botão de publicar arquivos FABS durante o processamento
+Dado que o usuário acessa o sistema
+Quando clicar no botão de publicar arquivos FABS
+Então o botão de publicar deve ser desativado enquanto o processamento ocorre enão deve ser permitido realizar múltiplos cliques no mesmo envio","Funcionalidade: Desativar o botão de publicação durante o processamento de derivações
+
+Cenário: Desativar o botão de publicação após o clique durante as derivações
+Dado que o usuário está realizando uma submissão no FABS
+Quando o usuário clica no botão de publicação durante o processamento das derivações
+Então o sistema desativa o botão de publicação para impedir múltiplos cliques na mesma submissão"
+"C04","gemini","few-shot","REF_C04.feature","GEM_FS_C04.feature","Funcionalidade: Validar registros de empréstimos  
+
+Cenário: Aceitar valores zero e em branco para registros de empréstimos
+Dado que o usuário da agência acessa o sistema
+Quando enviar registros de empréstimos com valores zero ou em branco
+Então o sistema deve aceitar esses registros sem erros de validação","Funcionalidade: Validação de registros de empréstimo nas regras FABS
+
+Cenário: Validar registro de empréstimo com valor zero ou em branco
+Dado que o usuário da agência possui um registro de empréstimo com valor zero ou em branco
+Quando as regras de validação FABS são executadas no registro de empréstimo
+Então as regras de validação FABS aceitam o registro de empréstimo"
+"C05","gemini","few-shot","REF_C05.feature","GEM_FS_C05.feature","Funcionalidade: Validar data e hora de atualização 
+
+Cenário: Mostrar data e hora de atualização na caixa de informações do cabeçalho
+Dado que o usuário da agência acessa o sistema
+Quando visualizar a caixa de informações do cabeçalho
+Então o sistema deve exibir a data e hora de atualização corretamente","Funcionalidade: Exibir data e hora atualizadas na caixa de informações do cabeçalho
+
+Cenário: Visualizar data e hora de atualização na caixa de informações do cabeçalho
+Dado que o usuário da agência possui acesso à caixa de informações do cabeçalho
+Quando a caixa de informações do cabeçalho é atualizada
+Então o sistema exibe a data e a hora atualizadas na caixa de informações do cabeçalho"
+"C06","gemini","few-shot","REF_C06.feature","GEM_FS_C06.feature","Funcionalidade: Validar extensão de arquivo durante o upload
+
+Cenário: Exibir mensagem de erro ao enviar um arquivo com extensão incorreta
+Dado que o usuário da agência acessa o sistema
+Quando realizar o upload de um arquivo com extensão incorreta
+Então o sistema deve exibir uma mensagem de erro relacionada à extensão do arquivo","Funcionalidade: Receber erro no nível de arquivo ao enviar arquivo com extensão incorreta
+
+Cenário: Enviar arquivo com extensão incorreta
+Dado que o usuário da agência possui um arquivo com extensão incorreta para envio
+Quando o usuário da agência envia o arquivo com a extensão incorreta
+Então o sistema apresenta uma mensagem de erro no nível de arquivo mais útil"
+"C07","gemini","few-shot","REF_C07.feature","GEM_FS_C07.feature","Funcionalidade: Exibir informações do criador da submissão
+
+Cenário: Exibir informações precisas sobre o criador da submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar uma submissão
+Então o sistema deve exibir corretamente o nome do usuário que criou a submissão","Funcionalidade: Visualizar criador da submissão
+
+Cenário: Visualizar o criador de uma submissão
+Dado que o usuário da agência possui uma submissão cadastrada
+Quando o usuário da agência visualiza o criador da submissão
+Então o sistema exibe com precisão quem criou a submissão"
+"C08","gemini","few-shot","REF_C08.feature","GEM_FS_C08.feature","Funcionalidade: Navegar entre FABS e DABS
+
+Cenário: Navegar para páginas FABS ou DABS a partir da página inicial
+Dado que o usuário da agência acessa a página inicial
+Quando realizar a navegação para FABS ou DABS
+Então o sistema deve redirecionar o usuário para a página da área correspondente","Funcionalidade: Navegar para as páginas FABS ou DABS
+
+Cenário: Acessar as páginas do site a partir da página inicial
+Dado que o usuário da agência está na página inicial
+Quando o usuário da agência navega para as páginas FABS ou DABS
+Então o sistema permite o acesso a ambos os lados do site"
+"C09","gemini","few-shot","REF_C09.feature","GEM_FS_C09.feature","Funcionalidade: Consultar período de submissão
+
+Cenário: Exibir informações sobre o período de submissão
+Dado que o usuário da agência acessa o sistema
+Quando visualizar as informações de submissão
+Então o sistema deve exibir as datas de início e término do período de submissão","Funcionalidade: Consultar período de submissão
+
+Cenário: Visualizar as datas de início e término do período de submissão
+Dado que o usuário da agência possui acesso ao sistema
+Quando o usuário da agência consulta o período de submissão
+Então o sistema apresenta as datas de início e término da submissão"
+"C10","gemini","few-shot","REF_C10.feature","GEM_FS_C10.feature","Funcionalidade: Consultar número de linhas a serem publicadas
+
+Cenário: Exibir informações sobre o número de linhas a serem publicadas
+Dado que o usuário acessa o sistema e está na página de submissão
+Quando visualizar as informações de submissão
+Então o sistema deve exibir claramente o número de linhas que serão publicadas","Funcionalidade: Consultar quantidade de linhas a serem publicadas
+
+Cenário: Consultar quantidade de linhas antes da publicação
+Dado que o usuário necessita decidir se realiza a publicação
+Quando o usuário consulta a quantidade de linhas que serão publicadas
+Então o sistema apresenta a quantidade de linhas a serem publicadas"
+"C11","gemini","few-shot","REF_C11.feature","GEM_FS_C11.feature","Funcionalidade: Consultar informações do painel de submissão
+
+Cenário: Exibir informações adicionais no painel de submissão
+Dado que o usuário FABS acessa o painel de submissão
+Quando visualizar o painel de submissão
+Então o sistema deve exibir informações adicionais para melhor gerenciar submissões e solicitações de IG","Funcionalidade: Visualizar informações adicionais no painel de submissões
+
+Cenário: Visualizar informações adicionais no painel de submissões
+Dado que o usuário do FABS acessa o painel de submissões
+Quando o usuário do FABS visualiza as informações adicionais no painel de submissões
+Então o sistema apresenta as informações adicionais para o gerenciamento de submissões e solicitações de IG"
+"C12","gemini","few-shot","REF_C12.feature","GEM_FS_C12.feature","Funcionalidade: Cadastrar conta de editor
+
+Cenário: Realizar cadastro de conta de editor
+Dado que o usuário acessa o sistema e deseja possuir uma conta de editor
+Quando realizar o cadastro
+Então deve possuir uma conta de editor para publicar seus pacotes de dados","Funcionalidade: Cadastrar conta de publicador
+
+Cenário: Cadastrar uma nova conta de publicador
+Dado que o publicador não possui uma conta cadastrada
+Quando o publicador realiza o cadastro de uma conta
+Então o sistema disponibiliza a conta de publicador para a publicação de pacotes de dados no registro"
+"C13","gemini","few-shot","REF_C13.feature","GEM_FS_C13.feature","Funcionalidade: Importar pacote de dados
+
+Cenário: Importar pacote de dados para o registro
+Dado que o editor acessa o sistema e possui pacotes de dados para importação
+Quando importar um pacote de dados para o registro
+Então o pacote de dados deve permanecer disponível online para acesso futuro","Funcionalidade: Importar pacote de dados no registro
+
+Cenário: Importar pacote de dados com sucesso
+Dado que o publicador possui um pacote de dados para importação
+Quando o publicador importa seu pacote de dados no registro
+Então o sistema disponibiliza o pacote de dados em um local online permanente para acesso"
+"C14","gemini","few-shot","REF_C14.feature","GEM_FS_C14.feature","Funcionalidade: Despublicar pacote de dados
+
+Cenário: Despublicar pacotes de dados
+Dado que o editor acessa o sistema e possui pacotes de dados publicados
+Quando despublicar um pacote de dados
+Então o pacote de dados não deve mais ser visível para os demais usuários","Funcionalidade: Despublicar pacote de dados
+
+Cenário: Despublicar um pacote de dados para torná-lo indisponível
+Dado que o publicador possui um pacote de dados publicado
+Quando o publicador despublica o pacote de dados
+Então o sistema torna o pacote de dados não visível para qualquer pessoa"
+"C15","gemini","few-shot","REF_C15.feature","GEM_FS_C15.feature","Funcionalidade: Criar pacote de dados
+
+Cenário: Criar pacote de dados pela interface
+Dado que o editor acessa o sistema
+Quando criar um pacote de dados pela interface
+Então o pacote de dados deve ficar disponível e publicado","Funcionalidade: Criar um pacote de dados
+
+Cenário: Criar e publicar um pacote de dados na interface do usuário
+Dado que o publicador está na interface do usuário
+Quando o publicador cria um pacote de dados
+Então o sistema disponibiliza e publica o pacote de dados"
+"C16","gemini","few-shot","REF_C16.feature","GEM_FS_C16.feature","Funcionalidade: Restaurar pacote de dados excluído
+
+Cenário: Restaurar pacotes de dados excluídos
+Dado que o editor acessa o sistema e possui pacotes de dados excluídos
+Quando restaurar um pacote de dados excluído
+Então o pacote de dados deve se tornar visível novamente para os demais usuários","Funcionalidade: Restaurar pacotes de dados excluídos
+
+Cenário: Restaurar pacote de dados excluído para torná-lo visível novamente
+Dado que o publicador possui um pacote de dados excluído
+Quando o publicador restaura o pacote de dados excluído
+Então o sistema exibe o pacote de dados novamente"
+"C17","gemini","few-shot","REF_C17.feature","GEM_FS_C17.feature","Funcionalidade: Pesquisar pacotes de dados
+
+Cenário: Pesquisar pacotes de dados
+Dado que o usuário acessa o sistema  
+Quando realizar uma pesquisa por pacotes de dados
+Então o sistema deve exibir os pacotes de dados correspondentes aos critérios da pesquisa","Funcionalidade: Buscar pacotes de dados
+
+Cenário: Buscar pacotes de dados de interesse
+Dado que o consumidor deseja encontrar pacotes de dados
+Quando o consumidor busca pacotes de dados
+Então o sistema apresenta os pacotes de dados encontrados"
+"C18","gemini","few-shot","REF_C18.feature","GEM_FS_C18.feature","Funcionalidade: Baixar pacote de dados em arquivo único
+
+Cenário: Baixar pacote de dados em um único arquivo
+Dado que o usuário possui um pacote de dados disponível
+Quando realizar o download de um pacote de dados
+Então o sistema deve fornecer o pacote de dados completo em um único arquivo para download","Funcionalidade: Baixar pacote de dados em um único arquivo
+
+Cenário: Baixar pacote de dados completo
+Dado que o consumidor possui acesso a um pacote de dados
+Quando o consumidor baixa o pacote de dados em um único arquivo
+Então o sistema disponibiliza o pacote de dados completo sem a necessidade de baixar o descritor e cada recurso manualmente"
+"C19","gemini","few-shot","REF_C19.feature","GEM_FS_C19.feature","Funcionalidade: Editar perfil do proprietário
+
+Cenário: Editar perfil do proprietário
+Dado que o proprietário acessa o sistema
+Quando realizar alterações em seu perfil
+Então o sistema deve atualizar as informações do perfil com os novos dados fornecidos","Funcionalidade: Editar perfil de proprietário
+
+Cenário: Editar o perfil com novas informações
+Dado que o proprietário possui um perfil cadastrado
+Quando o proprietário edita o seu perfil
+Então o sistema atualiza o perfil com as novas informações"
+"C20","gemini","few-shot","REF_C20.feature","GEM_FS_C20.feature","Funcionalidade: Adicionar usuário como membro de uma editora
+
+Cenário: Convidar usuário existente para se tornar membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando convidar um usuário existente para se tornar membro de sua editora
+Então o usuário deve poder se tornar membro da editora","Funcionalidade: Convidar um usuário existente
+
+Cenário: Convidar um usuário para se tornar membro de uma editora
+Dado que o proprietário possui uma editora cadastrada
+Quando o proprietário convida um usuário existente
+Então o sistema adiciona o usuário como membro da editora"
+"C21","gemini","few-shot","REF_C21.feature","GEM_FS_C21.feature","Funcionalidade: Remover membro de uma editora
+
+Cenário: Remover membro de uma editora
+Dado que o proprietário acessa o sistema
+Quando remover um membro de sua editora
+Então o membro não deve mais ter a capacidade de publicar ou modificar os pacotes de dados da editora","Funcionalidade: Remover membro da editora
+
+Cenário: Remover permissões de membro da editora
+Dado que o proprietário possui um membro na sua editora
+Quando o proprietário remove a pessoa da associação na editora
+Então o sistema revoga a capacidade da pessoa de publicar ou modificar os pacotes de dados"
+"C22","gemini","few-shot","REF_C22.feature","GEM_FS_C22.feature","Funcionalidade: Conceder propriedade de uma editora
+
+Cenário: Tornar um usuário proprietário
+Dado que o proprietário acessa o sistema
+Quando tornar um usuário proprietário
+Então o usuário deve ter controle total sobre a editora e seus pacotes de dados","Funcionalidade: Tornar um usuário proprietário
+
+Cenário: Atribuir perfil de proprietário a um usuário
+Dado que o proprietário possui um usuário cadastrado
+Quando o proprietário torna o usuário um proprietário
+Então o sistema concede controle total ao usuário"
+"C23","gemini","few-shot","REF_C23.feature","GEM_FS_C23.feature","Funcionalidade: Remover usuário como proprietário
+
+Cenário: Remover um usuário como proprietário
+Dado que o proprietário acessa o sistema
+Quando remover um usuário como proprietário
+Então o usuário deve se tornar apenas um membro e não ter mais controle total sobre a editora e seus pacotes de dados","Funcionalidade: Remover usuário da função de proprietário
+
+Cenário: Alterar função do usuário de proprietário para membro
+Dado que o proprietário possui um usuário cadastrado como proprietário
+Quando o proprietário remove o usuário da função de proprietário
+Então o sistema define o usuário como membro sem controle total"
+"C24","gemini","few-shot","REF_C24.feature","GEM_FS_C24.feature","Funcionalidade: Aplicar restrição no sistema
+
+Cenário: Aplicar uma restrição 
+Dado que um membro da equipe acessa o sistema
+Quando aplicar uma restrição
+Então o sistema deve impedir a progressão através do workflow ou outras ações no sistema até que o problema seja resolvido","Funcionalidade: Aplicar uma retenção no sistema
+
+Cenário: Aplicar uma retenção para impedir o avanço no fluxo de trabalho
+Dado que o membro da equipe tem permissão para gerenciar retenções no sistema
+Quando o membro da equipe aplica uma retenção
+Então o sistema impede o avanço no fluxo de trabalho ou outras ações até que a questão seja resolvida"
+"C25","gemini","few-shot","REF_C25.feature","GEM_FS_C25.feature","Funcionalidade: Remover restrição no sistema
+
+Cenário: Remover uma restrição
+Dado que um membro da equipe acessa o sistema
+Quando remover uma restrição
+Então o sistema deve permitir a progressão através do workflow ou outras ações no sistema agora que o problema foi resolvido","Funcionalidade: Remover bloqueio
+
+Cenário: Remover um bloqueio do sistema
+Dado que um membro da equipe possui um bloqueio registrado no sistema
+Quando o membro da equipe remove o bloqueio
+Então o sistema permite o prosseguimento do fluxo de trabalho"
+"C26","gemini","few-shot","REF_C26.feature","GEM_FS_C26.feature","Funcionalidade: Consultar status de transações
+
+Cenário: Consultar status de uma transação 
+Dado que um solicitante acessa o sistema
+Quando verificar o status da transação
+Então deve visualizar a etapa do processo em que se encontra o provisionamento do serviço","Funcionalidade: Consultar status de uma transação
+
+Cenário: Consultar status de uma transação
+Dado que o requerente possui uma transação em andamento
+Quando o requerente consulta o status da transação
+Então o sistema apresenta o status da transação com as informações do processo de provisionamento do serviço"
+"C27","gemini","few-shot","REF_C27.feature","GEM_FS_C27.feature","Funcionalidade: Criar conta no Portal do Cliente
+
+Cenário: Criar conta de usuário do Portal do Cliente
+Dado que o usuário acessa o Portal do cliente
+Quando realizar o cadastro
+Então deve poder realizar login 
+E deve poder acessar transações que necessitam de autenticação","Funcionalidade: Criar conta de usuário do portal do cliente
+
+Cenário: Criar uma conta de usuário do portal do cliente
+Dado que o cliente deseja se autenticar no portal do cliente
+Quando o cliente cria uma conta de usuário do portal do cliente
+Então o sistema permite que o cliente realize o login no portal do cliente"
+"C28","gemini","few-shot","REF_C28.feature","GEM_FS_C28.feature","Funcionalidade: Enviar solicitação
+
+Cenário: Realizar envio de solicitação
+Dado que o solicitante acessa o sistema
+Quando enviar uma solicitação com suas informações, planos e/ou documentos
+Então a solicitação deve ser enviada para iniciar uma transação com o Condado","Funcionalidade: Submeter candidatura
+
+Cenário: Submeter informações, planos ou documentos para iniciar uma transação
+Dado que o candidato possui as informações necessárias para iniciar uma transação com o condado
+Quando o candidato submete a candidatura
+Então o sistema inicia a transação com o condado"
+"C29","gemini","few-shot","REF_C29.feature","GEM_FS_C29.feature","Funcionalidade: Enviar documentação de suporte
+
+Cenário: Enviar documentação de suporte
+Dado que o solicitante possui uma solicitação
+Quando enviar a documentação de suporte da solicitação
+Então a documentação deve ser enviada para atender aos requisitos documentais da solicitação","Funcionalidade: Enviar documentação de suporte
+
+Cenário: Enviar documentação de suporte da candidatura
+Dado que o candidato possui requisitos de documentação pendentes para sua candidatura
+Quando o candidato envia a documentação de suporte
+Então o sistema atende aos requisitos de documentação da candidatura"
+"C30","gemini","few-shot","REF_C30.feature","GEM_FS_C30.feature","Funcionalidade: Receber notificação de alteração de atributos geoespaciais
+
+Cenário: Notificar alteração de atributos geoespaciais
+Dado que o membro da equipe está revisando uma solicitação ou permissão
+Quando os atributos geoespaciais forem alterados
+Então o membro da equipe deve ser notificado sobre a alteração","Funcionalidade: Notificar alteração de atributos geoespaciais
+
+Cenário: Notificar membro da equipe sobre alteração de atributos geoespaciais
+Dado que o membro da equipe possui uma licença ou solicitação cadastrada
+Quando os atributos geoespaciais são alterados
+Então o sistema notifica o membro da equipe sobre a alteração"
+"C31","gemini","few-shot","REF_C31.feature","GEM_FS_C31.feature","Funcionalidade: Criar inspeção
+
+Cenário: Criar uma inspeção
+Dado que o membro da equipe de inspeção acessa o sistema
+Quando criar uma inspeção
+Então a inspeção deve ser criada e estar disponível para agendamento e atribuição","Funcionalidade: Criar inspeção
+
+Cenário: Criar uma nova inspeção
+Dado que o membro da equipe de inspeção tem permissão para gerenciar inspeções
+Quando o membro da equipe de inspeção cria uma inspeção
+Então o sistema agenda e atribui a inspeção"
+"C32","gemini","few-shot","REF_C32.feature","GEM_FS_C32.feature","Funcionalidade: Revisar modificações de código
+
+Cenário: Revisar modificações de código submetidas pelo solicitante
+Dado que o membro da equipe de análise de projetos acessa uma solicitação com modificações de código submetidas pelo solicitante
+Quando revisar as modificações de código
+Então deve poder revisar a solicitação
+E se aprovada, deve poder associá-la ao projeto apropriado","Funcionalidade: Revisar modificações do código
+
+Cenário: Revisar solicitação de modificação do código
+Dado que o analista de revisão de planos possui uma solicitação de modificação do código enviada pelo requerente
+Quando o analista de revisão de planos revisa a solicitação de modificação do código
+Então o sistema associa a modificação do código aprovada ao projeto correspondente"
+"C33","gemini","few-shot","REF_C33.feature","GEM_FS_C33.feature","Funcionalidade: Gerenciar carga de trabalho dos analistas de projetos
+
+Cenário: Gerenciar carga de trabalho dos analistas de projetos
+Dado que o supervisor da equipe de análise de projetos acessa o sistema
+Quando gerenciar a carga de trabalho dos analistas de projetos
+Então deve poder monitorar e ajustar a carga de trabalho conforme necessário para garantir os níveis de serviço","Funcionalidade: Gerenciar carga de trabalho dos revisores de planos
+
+Cenário: Monitorar e ajustar a carga de trabalho dos revisores de planos
+Dado que o supervisor da equipe de revisão de planos possui revisores de planos sob sua supervisão
+Quando o supervisor da equipe de revisão de planos gerencia a carga de trabalho dos revisores
+Então o sistema permite monitorar e ajustar a carga de trabalho dos revisores para garantir o cumprimento dos níveis de serviço"
+"C34","gemini","few-shot","REF_C34.feature","GEM_FS_C34.feature","Funcionalidade: Realizar upload prévio de arquivos
+
+Cenário: Fazer upload de arquivos para anexá-los a uma página
+Dado que o pesquisador acessa o sistema pela interface web
+Quando realizar o upload de arquivos
+Então os arquivos devem ficar disponíveis para serem anexados posteriormente a uma página do livro de registros","Funcionalidade: Enviar arquivos antes de anexá-los a uma página do diário de bordo
+
+Cenário: Enviar arquivos utilizando a interface web
+Dado que o pesquisador está utilizando a interface web
+Quando o pesquisador envia os arquivos antes de anexá-los a uma página do diário de bordo
+Então o sistema disponibiliza os arquivos enviados para serem anexados à página do diário de bordo"
+"C35","gemini","few-shot","REF_C35.feature","GEM_FS_C35.feature","Funcionalidade: Anexar arquivos a uma página do livro de registros
+
+Cenário: Anexar arquivos não associados a uma página
+Dado que o pesquisador possui arquivos que não estão anexados a uma página do livro de registros
+Quando anexar os arquivos a uma página do livro de registros
+Então os arquivos devem ficar anexados à página do livro de registros","Funcionalidade: Anexar arquivos não anexados a uma página do diário de bordo
+
+Cenário: Anexar arquivos não anexados a uma página do diário de bordo
+Dado que o pesquisador possui arquivos que não estão anexados
+Quando o pesquisador anexa esses arquivos a uma página do diário de bordo
+Então o sistema vincula os arquivos à página do diário de bordo"
+"C36","gemini","few-shot","REF_C36.feature","GEM_FS_C36.feature","Funcionalidade: Receber alerta sobre arquivos não anexados
+
+Cenário: Alertar sobre arquivos não anexados
+Dado que o pesquisador possui arquivos em seu espaço de trabalho
+Quando houverem arquivos não estão anexados no espaço de trabalho
+Então o pesquisador deve receber um alerta sobre os arquivos não anexados","Funcionalidade: Receber alerta de arquivos não anexados
+
+Cenário: Alertar sobre arquivos não anexados na área de trabalho
+Dado que o pesquisador possui arquivos não anexados em sua área de trabalho
+Quando o pesquisador recebe um alerta
+Então o sistema alerta sobre os arquivos não anexados na área de trabalho"
+"C37","gemini","few-shot","REF_C37.feature","GEM_FS_C37.feature","Funcionalidade: Baixar arquivos anexados a um experimento
+
+Cenário: Baixar arquivos anexados a um experimento pelo navegador
+Dado que o pesquisador possui arquivos anexados a um experimento
+Quando realizar o download dos arquivos pelo navegador
+Então os arquivos devem ser disponibilizados para download","Funcionalidade: Baixar arquivos anexados a um experimento
+
+Cenário: Baixar arquivo anexado a um experimento usando o navegador Web
+Dado que o pesquisador possui um experimento com arquivos anexados
+Quando o pesquisador baixa um arquivo anexado ao experimento usando o navegador Web
+Então o sistema disponibiliza o arquivo anexado para o pesquisador"
+"C38","gemini","few-shot","REF_C38.feature","GEM_FS_C38.feature","Funcionalidade: Realizar upload de arquivos maiores que 1 GB
+
+Cenário: Realizar upload de arquivos com mais de 1GB
+Dado que o usuário acessa o sistema
+Quando realizar o upload de arquivos
+Então deve ser possível anexar para upload aqueles com mais de 1 GB de tamanho","Funcionalidade: Enviar arquivos grandes com mais de 1GB de tamanho
+
+Cenário: Enviar arquivo grande com mais de 1GB de tamanho
+Dado que o usuário possui um arquivo com mais de 1GB de tamanho
+Quando o usuário envia o arquivo com mais de 1GB de tamanho
+Então o sistema realiza o envio do arquivo com sucesso"
+"C39","gemini","few-shot","REF_C39.feature","GEM_FS_C39.feature","Funcionalidade: Atribuir tags a arquivos enviados
+
+Cenário: Atribuir tags a arquivos enviados
+Dado que o usuário possui arquivos enviados
+Quando atribuir tags aos arquivos
+Então os arquivos devem ficar associados às tags atribuídas","Funcionalidade: Atribuir tags a arquivos enviados
+
+Cenário: Atribuir tags a um arquivo enviado
+Dado que o usuário possui arquivos enviados
+Quando o usuário atribui tags a um arquivo
+Então o sistema associa as tags ao arquivo"
+"C40","gemini","few-shot","REF_C40.feature","GEM_FS_C40.feature","Funcionalidade: Filtrar arquivos por tipo
+
+Cenário: Filtrar arquivos com base no tipo
+Dado que o usuário realizou uma pesquisa por arquivos
+Quando filtrar os resultados pelo tipo de arquivo
+Então o sistema deve exibir apenas os arquivos correspondentes ao tipo selecionado","Funcionalidade: Filtrar arquivos por tipo
+
+Cenário: Filtrar arquivos dos resultados de busca por tipo
+Dado que o usuário possui resultados de busca com arquivos
+Quando o usuário filtra os arquivos por tipo
+Então o sistema apresenta os arquivos filtrados pelo tipo selecionado"
+"C41","gemini","few-shot","REF_C41.feature","GEM_FS_C41.feature","Funcionalidade: Restaurar arquivos excluídos
+
+Cenário: Restaurar arquivos deletados
+Dado que o usuário possui arquivos que foram deletados
+Quando restaurar um arquivo 
+Então o arquivo deve ser restaurado e ficar novamente disponível para o usuário","Funcionalidade: Restaurar arquivos excluídos
+
+Cenário: Restaurar um arquivo excluído acidentalmente
+Dado que o usuário excluiu um arquivo acidentalmente
+Quando o usuário restaura o arquivo excluído
+Então o sistema restaura o arquivo para o usuário"
+"C42","gemini","few-shot","REF_C42.feature","GEM_FS_C42.feature","Funcionalidade: Pesquisar arquivos
+
+Cenário: Pesquisar especificamente por arquivosa
+Dado que o usuário realiza uma pesquisa
+Quando pesquisar especificamente por arquivos
+Então o sistema deve exibir resultados referentes aos arquivos, sem incluir páginas do livro de registros","Funcionalidade: Pesquisar por arquivos
+
+Cenário: Pesquisar especificamente por arquivos
+Dado que o usuário deseja pesquisar no sistema
+Quando o usuário pesquisa especificamente por arquivos em vez de páginas do diário de bordo
+Então o sistema apresenta os arquivos correspondentes à pesquisa"
+"C43","gemini","few-shot","REF_C43.feature","GEM_FS_C43.feature","Funcionalidade: Baixar arquivos pelos resultados da pesquisa
+
+Cenário: Realizar download de arqivos buscados
+Dado que o usuário realizou uma busca
+Quando visualizar os resultados
+Então deve ser possível realizar o download de arquivos direto da listagem de resultados da busca","Funcionalidade: Baixar arquivos diretamente da página de resultados de busca
+
+Cenário: Baixar arquivo diretamente da página de resultados de busca
+Dado que o usuário está na página de resultados de busca
+Quando o usuário baixa o arquivo diretamente da página de resultados de busca
+Então o sistema realiza o download do arquivo selecionado pelo usuário"
+"C44","gemini","few-shot","REF_C44.feature","GEM_FS_C44.feature","Funcionalidade: Anexar múltiplos arquivos a uma página do livro de registros
+
+Cenário: Anexar múltiplos arquivos a uma página do livro de registros
+Dado que o usuário acessa uma página do livro de registros
+Quando anexar múltiplos arquivos à página
+Então os arquivos devem ser anexados à página do livro de registros","Funcionalidade: Anexar múltiplos arquivos a uma página do diário de bordo
+
+Cenário: Anexar múltiplos arquivos simultaneamente
+Dado que o usuário está em uma página do diário de bordo
+Quando o usuário anexa múltiplos arquivos de uma só vez
+Então o sistema adiciona os arquivos anexados à página do diário de bordo"
+"C45","gemini","few-shot","REF_C45.feature","GEM_FS_C45.feature","Funcionalidade: Baixar múltiplos arquivos dos resultados da pesquisa
+
+Cenário: Baixar múltiplos arquivos dos resultados da pesquisa
+Dado que o usuário possui múltiplos arquivos nos resultados da pesquisa
+Quando realizar o download dos arquivos
+Então o sistema deve permitir baixar os múltiplos arquivos de uma só vez","Funcionalidade: Baixar múltiplos arquivos dos resultados de busca
+
+Cenário: Baixar múltiplos arquivos simultaneamente
+Dado que o usuário visualiza arquivos nos resultados de busca
+Quando o usuário baixa múltiplos arquivos de uma só vez
+Então o sistema realiza o download dos arquivos selecionados"

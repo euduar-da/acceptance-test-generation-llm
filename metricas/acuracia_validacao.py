@@ -1,25 +1,32 @@
+
 """
 Cálculo da Acurácia de Validação dos arquivos Gherkin.
 
 A métrica utiliza os resultados previamente obtidos
 pelo Gherkin Lint.
-
-Acurácia de Validação =
-    arquivos aprovados pelo Gherkin Lint
-    ------------------------------------
-    total de arquivos .feature avaliados
 """
 
 import csv
 from pathlib import Path
 
 
+# Diretório onde está este script
 BASE_DIR = Path(__file__).resolve().parent
 
+
+# CSV de entrada com os resultados do Gherkin Lint
 ARQUIVO_RESULTADOS_LINT = (
     BASE_DIR
     / "resultados"
     / "resultados_gherkin_lint.csv"
+)
+
+
+# CSV de saída com a Acurácia de Validação
+ARQUIVO_SAIDA_ACURACIA = (
+    BASE_DIR
+    / "resultados"
+    / "resultados_acuracia_validacao.csv"
 )
 
 
@@ -92,7 +99,7 @@ def calcular_acuracia_validacao():
         for resultado in resultados
         if converter_booleano(
             resultado[
-                "gherkin_lint_aprovado"
+                "aprovado_geral"
             ]
         )
     )
@@ -115,6 +122,126 @@ def calcular_acuracia_validacao():
     )
 
 
+def salvar_resultados_csv():
+    """
+    Gera um CSV com a Acurácia de Validação
+    por modelo e técnica de prompting,
+    incluindo o resultado geral.
+    """
+
+    with open(
+        ARQUIVO_RESULTADOS_LINT,
+        "r",
+        encoding="utf-8-sig",
+        newline=""
+    ) as arquivo:
+        resultados = list(csv.DictReader(arquivo))
+
+    grupos = {}
+
+    for resultado in resultados:
+
+        modelo = resultado["modelo"]
+        tecnica = resultado["tecnica_prompt"]
+
+        chave = (modelo, tecnica)
+
+        if chave not in grupos:
+            grupos[chave] = {
+                "total": 0,
+                "aprovados": 0
+            }
+
+        grupos[chave]["total"] += 1
+
+        if converter_booleano(
+            resultado["aprovado_geral"]
+        ):
+            grupos[chave]["aprovados"] += 1
+
+    campos = [
+        "modelo",
+        "tecnica_prompt",
+        "total",
+        "aprovados",
+        "reprovados",
+        "acuracia",
+        "acuracia_percentual"
+    ]
+
+    ARQUIVO_SAIDA_ACURACIA.parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    total_geral = 0
+    aprovados_geral = 0
+
+    with open(
+        ARQUIVO_SAIDA_ACURACIA,
+        "w",
+        encoding="utf-8-sig",
+        newline=""
+    ) as arquivo:
+
+        writer = csv.DictWriter(
+            arquivo,
+            fieldnames=campos
+        )
+
+        writer.writeheader()
+
+        for (modelo, tecnica), dados in sorted(
+            grupos.items()
+        ):
+
+            total = dados["total"]
+            aprovados = dados["aprovados"]
+            reprovados = total - aprovados
+
+            acuracia = (
+                aprovados / total
+                if total > 0 else 0.0
+            )
+
+            writer.writerow({
+                "modelo": modelo,
+                "tecnica_prompt": tecnica,
+                "total": total,
+                "aprovados": aprovados,
+                "reprovados": reprovados,
+                "acuracia": f"{acuracia:.6f}",
+                "acuracia_percentual": f"{acuracia * 100:.2f}"
+            })
+
+            total_geral += total
+            aprovados_geral += aprovados
+
+        reprovados_geral = (
+            total_geral - aprovados_geral
+        )
+
+        acuracia_geral = (
+            aprovados_geral / total_geral
+            if total_geral > 0 else 0.0
+        )
+
+        writer.writerow({
+            "modelo": "TOTAL_GERAL",
+            "tecnica_prompt": "todas",
+            "total": total_geral,
+            "aprovados": aprovados_geral,
+            "reprovados": reprovados_geral,
+            "acuracia": f"{acuracia_geral:.6f}",
+            "acuracia_percentual": f"{acuracia_geral * 100:.2f}"
+        })
+
+    print(
+        f"\nResultados da Acurácia de Validação salvos em:"
+        f"\n{ARQUIVO_SAIDA_ACURACIA}"
+    )
+
+
 def main():
 
     (
@@ -124,34 +251,15 @@ def main():
         total
     ) = calcular_acuracia_validacao()
 
-    print(
-        "\n--- Acurácia de Validação ---"
-    )
+    print("\n--- Acurácia de Validação ---")
 
-    print(
-        f"Total de arquivos avaliados: "
-        f"{total}"
-    )
+    print(f"Total de arquivos avaliados: {total}")
+    print(f"Arquivos aprovados: {aprovados}")
+    print(f"Arquivos reprovados: {reprovados}")
+    print(f"Acurácia: {acuracia:.4f}")
+    print(f"Acurácia (%): {acuracia * 100:.2f}%")
 
-    print(
-        f"Arquivos aprovados pelo "
-        f"Gherkin Lint: {aprovados}"
-    )
-
-    print(
-        f"Arquivos reprovados pelo "
-        f"Gherkin Lint: {reprovados}"
-    )
-
-    print(
-        f"Acurácia: "
-        f"{acuracia:.4f}"
-    )
-
-    print(
-        f"Acurácia (%): "
-        f"{acuracia * 100:.2f}%"
-    )
+    salvar_resultados_csv()
 
 
 if __name__ == "__main__":

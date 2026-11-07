@@ -4,22 +4,30 @@ import re
 import subprocess
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
 
 
 BASE_DIR = Path(__file__).resolve().parent
 
 RAIZ_PROJETO = BASE_DIR.parent
 
-PASTA_CENARIOS = RAIZ_PROJETO / "cenarios"
+PASTA_CENARIOS = (
+    RAIZ_PROJETO
+    / "cenarios"
+)
 
-
-CONFIG_GHERKIN = BASE_DIR / ".gherkin-lintrc"
+CONFIG_GHERKIN = (
+    BASE_DIR
+    / ".gherkin-lintrc"
+)
 
 ARQUIVO_SAIDA = (
     BASE_DIR
     / "resultados"
     / "resultados_gherkin_lint.csv"
 )
+
+
 
 
 ANSI_ESCAPE = re.compile(
@@ -245,10 +253,6 @@ def executar_gherkin_lint(arquivo):
     }
 
 
-# ============================================================
-# EXECUÇÃO PRINCIPAL
-# ============================================================
-
 def main():
     resultados = []
 
@@ -403,7 +407,6 @@ def main():
                 f"{estrutura['erros_estrutura']}"
             )
 
-    # Cria a pasta resultados/ caso ainda não exista.
     ARQUIVO_SAIDA.parent.mkdir(
         parents=True,
         exist_ok=True

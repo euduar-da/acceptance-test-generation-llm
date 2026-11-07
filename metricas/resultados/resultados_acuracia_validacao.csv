@@ -1,0 +1,11 @@
+﻿modelo,tecnica_prompt,total,aprovados,reprovados,acuracia,acuracia_percentual
+claude,few_shot,45,44,1,0.977778,97.78
+claude,one_shot,45,45,0,1.000000,100.00
+claude,zero_shot,45,45,0,1.000000,100.00
+gemini,few_shot,45,45,0,1.000000,100.00
+gemini,one_shot,45,45,0,1.000000,100.00
+gemini,zero_shot,45,45,0,1.000000,100.00
+gpt,few_shot,45,45,0,1.000000,100.00
+gpt,one_shot,45,45,0,1.000000,100.00
+gpt,zero_shot,45,45,0,1.000000,100.00
+TOTAL_GERAL,todas,405,404,1,0.997531,99.75
